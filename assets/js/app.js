@@ -9,8 +9,10 @@ document.body.classList.toggle("dark");
 }
 
 /* =========================
-   SCROLL REVEAL
+   SAFE REVEAL SYSTEM
 ========================= */
+
+window.addEventListener("DOMContentLoaded", () => {
 
 const reveals =
 document.querySelectorAll(
@@ -43,3 +45,5 @@ revealOnScroll
 );
 
 revealOnScroll();
+
+});
