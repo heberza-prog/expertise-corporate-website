@@ -1,119 +1,291 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EXPERTISE | Microsoft Cloud Solutions</title>
+  <title>EXPERTISE SRL | Microsoft Cloud & Continuity Services</title>
 
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --ms-blue: #00A4EF;
+      --ms-green: #7FBA00;
+      --dark: #111827;
+      --gray: #6B7280;
+      --light: #F9FAFB;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+    }
+
+    .logo {
+      font-weight: bold;
+      color: var(--ms-blue);
+      font-size: 20px;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    .btn {
+      background: var(--ms-blue);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 100px 60px;
+      text-align: center;
+      background: linear-gradient(135deg, #e6f4ff, #ffffff);
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--gray);
+      margin-bottom: 30px;
+    }
+
+    .section {
+      padding: 80px 60px;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 28px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--ms-blue);
+    }
+
+    .plans {
+      background: #f3f4f6;
+    }
+
+    .plan {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .price {
+      font-size: 26px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: var(--ms-green);
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .lang {
+      cursor: pointer;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
 
-  <header class="hero">
+<header>
+  <div class="logo">EXPERTISE SRL</div>
 
-    <nav class="navbar">
-      <div class="logo">EXPERTISE</div>
+  <nav>
+    <a href="#services">Servicios</a>
+    <a href="#plans">Planes</a>
+    <a href="#experience">Experiencia</a>
+    <a href="#contact">Contacto</a>
+    <span class="lang" onclick="toggleLang()">ES | EN</span>
+  </nav>
 
-      <div class="menu">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+  <a class="btn" href="#contact">Agenda una reunión</a>
+</header>
 
-    <div class="hero-content">
+<!-- HERO -->
+<section class="hero">
+  <h1 id="title">
+    Aseguramos la continuidad operativa de plataformas Microsoft críticas
+  </h1>
 
-      <h1>
-        Microsoft Cloud & Collaboration Solutions
-      </h1>
+  <p id="subtitle">
+    Azure | Microsoft 365 | SharePoint | Seguridad | Alta Disponibilidad | Optimización Cloud
+  </p>
 
-      <p>
-        We help organizations modernize infrastructure,
-        optimize Microsoft 365 environments,
-        improve collaboration and accelerate digital transformation.
-      </p>
+  <a class="btn" href="#services">Ver Servicios</a>
+</section>
 
-      <a href="#contact" class="btn">
-        Contact Us
-      </a>
+<!-- SERVICIOS -->
+<section class="section" id="services">
+  <h2>Servicios</h2>
 
+  <div class="grid">
+
+    <div class="card">
+      <h3>Continuidad Operativa</h3>
+      <p>Soporte, monitoreo, backups, parches y gestión de incidentes críticos.</p>
     </div>
 
-  </header>
-
-  <section id="services" class="section">
-
-    <h2>Services</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Microsoft 365</h3>
-        <p>
-          Administration, migration, governance and optimization of Microsoft 365 environments.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Azure Cloud</h3>
-        <p>
-          Cloud infrastructure, backup, virtualization and hybrid solutions.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>SharePoint Online</h3>
-        <p>
-          Collaboration, governance, document management and intranet solutions.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Cybersecurity</h3>
-        <p>
-          Identity, security hardening and Microsoft security best practices.
-        </p>
-      </div>
-
+    <div class="card">
+      <h3>Cloud & Azure</h3>
+      <p>Migraciones, optimización de costos, arquitectura híbrida y alta disponibilidad.</p>
     </div>
 
-  </section>
-
-  <section id="about" class="section dark">
-
-    <h2>About Us</h2>
-
-    <p class="about-text">
-      EXPERTISE provides enterprise consulting services focused on Microsoft technologies,
-      helping organizations improve collaboration, governance, infrastructure and operational efficiency.
-    </p>
-
-  </section>
-
-  <section id="contact" class="section">
-
-    <h2>Contact</h2>
-
-    <div class="contact-box">
-
-      <p>Email: hzuniga@expertise.com.bo</p>
-
-      <p>Santa Cruz, Bolivia</p>
-
+    <div class="card">
+      <h3>Seguridad y Gobierno</h3>
+      <p>Identity, MFA, auditoría, compliance y control de infraestructura.</p>
     </div>
 
-  </section>
+    <div class="card">
+      <h3>Microsoft 365 & SharePoint</h3>
+      <p>Arquitectura, metadata, gobernanza y automatización empresarial.</p>
+    </div>
 
-  <footer>
+    <div class="card">
+      <h3>SAM & Licenciamiento</h3>
+      <p>Optimización de licencias Microsoft y reducción de costos operativos.</p>
+    </div>
 
-    <p>
-      © 2026 EXPERTISE. All rights reserved.
-    </p>
+    <div class="card">
+      <h3>Alta Disponibilidad</h3>
+      <p>DRP, clustering, failover y resiliencia empresarial.</p>
+    </div>
 
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- PLANES -->
+<section class="section plans" id="plans">
+  <h2>Planes de Soporte</h2>
+
+  <div class="grid">
+
+    <div class="plan">
+      <h3>Base Corporativo</h3>
+      <div class="price">$700</div>
+      <p>Soporte + estabilidad + reportes mensuales</p>
+    </div>
+
+    <div class="plan">
+      <h3>Operación Continua</h3>
+      <div class="price">$1200</div>
+      <p>Monitoreo + optimización + soporte prioritario</p>
+    </div>
+
+    <div class="plan">
+      <h3>Continuidad Total</h3>
+      <div class="price">$1800</div>
+      <p>BCP + estrategia + continuidad empresarial completa</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCIA -->
+<section class="section" id="experience">
+  <h2>Experiencia</h2>
+
+  <div class="grid">
+
+    <div class="card">Banco Ganadero</div>
+    <div class="card">Banco Bisa</div>
+    <div class="card">Tigo</div>
+    <div class="card">CRE</div>
+    <div class="card">Saguapac</div>
+    <div class="card">Farmacorp</div>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section" id="contact">
+  <h2>Contacto</h2>
+
+  <div class="card">
+    <p>Email: hzuniga@expertise.com.bo</p>
+    <p>Phone: +591 78004351</p>
+    <p>Bolivia</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 EXPERTISE SRL - Microsoft Cloud & Continuity Services
+</footer>
+
+<script>
+  let lang = "es";
+
+  function toggleLang() {
+    if (lang === "es") {
+      document.getElementById("title").innerText =
+        "We ensure operational continuity of critical Microsoft platforms";
+
+      document.getElementById("subtitle").innerText =
+        "Azure | Microsoft 365 | SharePoint | Security | High Availability | Cloud Optimization";
+
+      lang = "en";
+    } else {
+      document.getElementById("title").innerText =
+        "Aseguramos la continuidad operativa de plataformas Microsoft críticas";
+
+      document.getElementById("subtitle").innerText =
+        "Azure | Microsoft 365 | SharePoint | Seguridad | Alta Disponibilidad | Optimización Cloud";
+
+      lang = "es";
+    }
+  }
+</script>
 
 </body>
 </html>
