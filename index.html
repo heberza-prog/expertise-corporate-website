@@ -3,51 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EXPERTISE S.R.L. | Enterprise IT</title>
-<link rel="stylesheet" href="assets/css/main.css">
+<title>EXPERTISE PORTAL | Enterprise IT Platform</title>
+
+<link rel="stylesheet" href="assets/app.css">
+<script defer src="assets/app.js"></script>
 </head>
 
 <body>
 
-<header class="nav">
-  <img src="assets/img/logo.png" class="logo">
+<!-- SIDEBAR -->
+<aside class="sidebar">
 
-  <nav>
-    <a href="services.html">Soluciones</a>
-    <a href="cases.html">Casos</a>
-    <a href="cost-optimization.html">Optimización de Costos</a>
-    <a href="en/index.html">EN</a>
-    <button onclick="toggleTheme()">🌗</button>
-  </nav>
-</header>
-
-<section class="hero">
-
-  <div class="hero-text">
-    <h1>Diseñamos entornos tecnológicos para empresas de alto desempeño</h1>
-
-    <p>
-      Especialistas en Microsoft, Azure y entornos de misión crítica con más de 15 años
-      de experiencia en infraestructura empresarial.
-    </p>
-
-    <a class="btn" href="cost-optimization.html">Optimizar mi infraestructura</a>
+  <div class="brand">
+    <img src="assets/img/logo.png">
+    <h3>EXPERTISE</h3>
   </div>
 
-  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+  <nav>
+    <a class="active">Overview</a>
+    <a>Infrastructure</a>
+    <a>Cloud Optimization</a>
+    <a>Security</a>
+    <a>Cost Management</a>
+    <a>Cases</a>
+    <a>Reports</a>
+  </nav>
 
-</section>
+</aside>
 
-<section class="strip">
-  <div>✔ Alta disponibilidad 24/7</div>
-  <div>✔ Optimización de costos IT</div>
-  <div>✔ Seguridad empresarial avanzada</div>
-</section>
+<!-- MAIN -->
+<main class="main">
 
-<footer>
-© 2026 EXPERTISE S.R.L.
-</footer>
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <h1>Enterprise Overview</h1>
 
-<script src="assets/js/main.js"></script>
+    <div class="actions">
+      <button onclick="toggleTheme()">🌗</button>
+      <button class="btn">New Assessment</button>
+    </div>
+  </header>
+
+  <!-- KPI GRID -->
+  <section class="grid">
+
+    <div class="card kpi">
+      <h2>99.9%</h2>
+      <p>Availability</p>
+    </div>
+
+    <div class="card kpi">
+      <h2>-35%</h2>
+      <p>Cost Optimization</p>
+    </div>
+
+    <div class="card kpi">
+      <h2>24/7</h2>
+      <p>Support Coverage</p>
+    </div>
+
+    <div class="card kpi">
+      <h2>Azure</h2>
+      <p>Core Platform</p>
+    </div>
+
+  </section>
+
+  <!-- DASHBOARD -->
+  <section class="panel">
+
+    <div class="card large">
+      <h3>Infrastructure Health</h3>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <div class="card large">
+      <h3>Optimization Status</h3>
+      <p>✔ Resources under control</p>
+      <p>✔ Licensing optimized</p>
+      <p>✔ Cloud efficiency active</p>
+    </div>
+
+  </section>
+
+</main>
+
 </body>
 </html>
