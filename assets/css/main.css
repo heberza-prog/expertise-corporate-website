@@ -1,77 +1,115 @@
 body{
 margin:0;
-font-family:"Segoe UI", Arial;
-background:#ffffff;
+font-family:"Segoe UI";
+background:#f5f7fb;
+display:flex;
 color:#111;
-transition:0.4s;
 }
 
+/* DARK MODE */
 body.dark{
 background:#0f172a;
 color:#e5e7eb;
 }
 
-.nav{
+/* SIDEBAR */
+.sidebar{
+width:260px;
+height:100vh;
+background:#ffffff;
+border-right:1px solid #e5e5e5;
+padding:20px;
+position:fixed;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:30px;
+}
+
+.brand img{height:32px}
+
+.sidebar nav a{
+display:block;
+padding:12px;
+border-radius:8px;
+margin-bottom:6px;
+cursor:pointer;
+color:#333;
+}
+
+.sidebar nav a:hover{
+background:#eef6ff;
+}
+
+/* MAIN */
+.main{
+margin-left:260px;
+padding:30px;
+width:100%;
+}
+
+/* TOPBAR */
+.topbar{
 display:flex;
 justify-content:space-between;
-padding:18px 50px;
-border-bottom:1px solid #ddd;
-position:sticky;
-top:0;
-background:white;
-}
-
-.logo{height:40px;}
-
-.hero{
-display:grid;
-grid-template-columns:1.2fr 1fr;
-padding:100px 60px;
-gap:40px;
 align-items:center;
+margin-bottom:20px;
 }
 
-.hero img{
-width:100%;
-border-radius:16px;
-}
-
-.hero h1{
-font-size:48px;
-}
-
+/* BUTTON */
 .btn{
 background:#0078d4;
 color:white;
-padding:12px 18px;
+border:none;
+padding:10px 14px;
 border-radius:8px;
-display:inline-block;
-text-decoration:none;
+cursor:pointer;
 }
 
-.strip{
+/* GRID KPI */
+.grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-padding:40px 60px;
-background:#f5f7fb;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-padding:60px;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-bottom:20px;
 }
 
 .card{
-padding:20px;
-background:#f5f7fb;
+background:white;
+padding:18px;
 border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
-.news-card{
-padding:30px;
-margin:20px 60px;
-background:#f5f7fb;
-border-radius:12px;
+/* KPI */
+.kpi h2{
+font-size:28px;
+margin:0;
+}
+
+/* PANEL */
+.panel{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+/* BARS */
+.bar{
+height:10px;
+background:linear-gradient(90deg,#0078d4,#60a5fa);
+margin:10px 0;
+border-radius:8px;
+}
+
+/* ANIMATIONS */
+.card{
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-4px);
 }
