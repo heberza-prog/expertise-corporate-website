@@ -1,1 +1,91 @@
+body{
+margin:0;
+font-family:"Segoe UI";
+color:#111;
+background:#fff;
+}
 
+/* NAVBAR TOP */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+border-bottom:1px solid #eee;
+background:white;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+height:40px;
+}
+
+/* MENU */
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
+font-size:14px;
+}
+
+nav a:hover{
+color:#0078d4;
+}
+
+/* HERO */
+.hero{
+display:grid;
+grid-template-columns:1.2fr 1fr;
+padding:100px 60px;
+gap:40px;
+align-items:center;
+}
+
+/* TEXT */
+.hero h1{
+font-size:52px;
+line-height:1.1;
+}
+
+.hero p{
+color:#666;
+font-size:18px;
+}
+
+/* BUTTONS */
+.buttons{
+margin-top:20px;
+display:flex;
+gap:10px;
+}
+
+.btn{
+background:#0078d4;
+color:white;
+padding:12px 18px;
+border-radius:8px;
+text-decoration:none;
+}
+
+.btn.secondary{
+background:#e5e5e5;
+color:#111;
+}
+
+/* KPI */
+.kpi-row{
+margin-top:25px;
+display:flex;
+gap:20px;
+color:#444;
+font-size:14px;
+}
+
+/* IMAGE */
+.hero-image img{
+width:100%;
+border-radius:16px;
+box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
