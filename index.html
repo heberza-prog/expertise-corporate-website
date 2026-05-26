@@ -11,25 +11,26 @@
 :root{
   --blue:#0078D4;
   --green:#2EB67D;
-  --light:#F5F7FA;
   --dark:#111;
   --gray:#666;
+  --soft:#f5f7fb;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",sans-serif;}
 
 body{background:white;color:var(--dark);}
 
-/* NAV */
+/* NAV MICROSOFT STYLE */
 nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 60px;
+  padding:14px 60px;
   background:white;
   border-bottom:1px solid #eee;
   position:sticky;
   top:0;
+  z-index:10;
 }
 
 .logo{
@@ -38,22 +39,22 @@ nav{
   letter-spacing:1px;
 }
 
-.menu a{
-  margin:0 12px;
+nav a{
+  margin:0 10px;
   text-decoration:none;
   color:#222;
   font-size:14px;
 }
 
-.menu a:hover{color:var(--blue);}
+nav a:hover{color:var(--blue);}
 
-/* HERO */
+/* HERO EMOCIONAL */
 .hero{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:80px 60px;
-  background:linear-gradient(120deg,#f5f9ff,#ffffff);
+  padding:90px 60px;
+  background:linear-gradient(120deg,#f7faff,#ffffff);
 }
 
 .hero-text{
@@ -61,72 +62,93 @@ nav{
 }
 
 .hero h1{
-  font-size:48px;
+  font-size:52px;
   font-weight:700;
+  line-height:1.1;
 }
 
 .hero p{
   margin-top:15px;
   font-size:18px;
   color:var(--gray);
+  line-height:1.5;
 }
 
-.hero img{
-  width:450px;
-  border-radius:20px;
-}
-
-/* BUTTON */
 .btn{
   display:inline-block;
-  margin-top:20px;
-  padding:12px 20px;
+  margin-top:22px;
+  padding:12px 22px;
   background:var(--blue);
   color:white;
-  text-decoration:none;
   border-radius:6px;
+  text-decoration:none;
 }
 
-/* SECTIONS */
+/* IMAGEN HERO */
+.hero img{
+  width:480px;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* SECCIONES */
 .section{
-  padding:60px;
-  background:white;
+  padding:70px 60px;
 }
 
-.cards{
+.section h2{
+  font-size:32px;
+  margin-bottom:30px;
+}
+
+/* CARDS */
+.grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:25px;
 }
 
 .card{
-  background:#fff;
+  border-radius:16px;
+  overflow:hidden;
+  background:white;
   border:1px solid #eee;
-  padding:20px;
-  border-radius:15px;
   transition:0.3s;
 }
 
 .card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transform:translateY(-6px);
+  box-shadow:0 18px 35px rgba(0,0,0,0.1);
 }
 
 .card img{
   width:100%;
-  border-radius:12px;
-  margin-bottom:15px;
+  height:200px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:18px;
+}
+
+.card-content h3{
+  margin-bottom:10px;
+}
+
+/* PLANES */
+.plans{
+  background:var(--soft);
 }
 
 /* FOOTER */
 footer{
-  background:#111;
-  color:white;
   text-align:center;
   padding:30px;
-  margin-top:40px;
+  background:#111;
+  color:white;
 }
 
+/* LANG */
 .lang{
   cursor:pointer;
   font-size:13px;
@@ -137,13 +159,12 @@ footer{
 
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="logo">EXPERTISE SRL</div>
 
-  <div class="menu">
+  <div>
     <a href="#">Servicios</a>
-    <a href="#">Cloud & Azure</a>
+    <a href="#">Cloud</a>
     <a href="#">Microsoft 365</a>
     <a href="#">Seguridad</a>
     <a href="#">Soporte</a>
@@ -155,97 +176,123 @@ footer{
 <section class="hero">
 
   <div class="hero-text">
-    <h1 id="title">Optimización y Continuidad IT de Nivel Enterprise</h1>
+    <h1 id="title">Tecnología que da confianza y continuidad a tu negocio</h1>
 
     <p id="subtitle">
-      Expertos en Microsoft Cloud, Azure, Microsoft 365, seguridad, licenciamiento y continuidad operativa.
+      Acompañamos a empresas a crecer con Microsoft Cloud, Azure y Microsoft 365,
+      con seguridad, estabilidad y personas felices usando tecnología sin fricción.
     </p>
 
-    <a class="btn" href="#">Solicitar evaluación</a>
+    <a class="btn" href="#">Solicitar diagnóstico</a>
   </div>
 
-  <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900" />
+  <!-- PERSONAJE EMOCIONAL (NO TECH) -->
+  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900" />
 
 </section>
 
-<!-- SERVICES -->
+<!-- SERVICIOS -->
 <section class="section">
-  <h2 style="margin-bottom:30px;">Servicios Principales</h2>
 
-  <div class="cards">
+  <h2>Servicios Principales</h2>
+
+  <div class="grid">
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800">
-      <h3>Cloud & Azure</h3>
-      <p>Optimización de infraestructura cloud, reducción de costos y arquitectura moderna.</p>
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900">
+      <div class="card-content">
+        <h3>Cloud & Azure</h3>
+        <p>Equipos trabajando con confianza, colaboración y eficiencia en la nube.</p>
+      </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800">
-      <h3>Microsoft 365</h3>
-      <p>Implementación, adopción y productividad empresarial segura.</p>
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=900">
+      <div class="card-content">
+        <h3>Microsoft 365</h3>
+        <p>Personas conectadas, comunicándose y siendo más productivas.</p>
+      </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800">
-      <h3>Seguridad</h3>
-      <p>Protección de infraestructura, hardening y buenas prácticas Microsoft.</p>
+      <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=900">
+      <div class="card-content">
+        <h3>Seguridad</h3>
+        <p>Confianza digital para trabajar sin miedo y con protección total.</p>
+      </div>
     </div>
 
   </div>
 </section>
 
-<!-- SUPPORT PLANS -->
-<section class="section" style="background:#f7f9fc;">
+<!-- PLANES -->
+<section class="section plans">
+
   <h2>Planes de Soporte</h2>
 
-  <div class="cards" style="margin-top:25px;">
+  <div class="grid">
 
     <div class="card">
-      <h3>Base Corporativo</h3>
-      <p>Soporte reactivo, monitoreo básico y reportes mensuales.</p>
+      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=900">
+      <div class="card-content">
+        <h3>Base Corporativo</h3>
+        <p>Estabilidad y soporte confiable para operaciones diarias.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Operación Continua</h3>
-      <p>Monitoreo proactivo, optimización y soporte prioritario.</p>
+      <img src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=900">
+      <div class="card-content">
+        <h3>Operación Continua</h3>
+        <p>Prevención, monitoreo y mejora continua del negocio.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Continuidad Total</h3>
-      <p>BCP, estrategia TI y acompañamiento empresarial completo.</p>
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900">
+      <div class="card-content">
+        <h3>Continuidad Total</h3>
+        <p>Estrategia empresarial, resiliencia y acompañamiento completo.</p>
+      </div>
     </div>
 
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACTO -->
 <section class="section">
+
   <h2>Contacto</h2>
+
   <p>Email: hzuniga@expertise.com.bo</p>
   <p>Tel: +591 78004351</p>
+
 </section>
 
 <footer>
-  © 2026 EXPERTISE SRL - Microsoft Solutions Partner Style
+  © 2026 EXPERTISE SRL — Microsoft Solutions Partner Experience
 </footer>
 
 <script>
-let lang = "es";
+let lang="es";
 
 function toggleLang(){
-  if(lang === "es"){
+  if(lang==="es"){
     document.getElementById("title").innerText =
-      "Enterprise IT Optimization & Continuity Services";
+      "Technology that brings confidence and continuity to your business";
+
     document.getElementById("subtitle").innerText =
-      "Experts in Microsoft Cloud, Azure, Microsoft 365, security and IT continuity.";
-    lang = "en";
-  } else {
+      "We help companies grow with Microsoft Cloud, Azure and Microsoft 365 through secure, stable and human-centered technology.";
+
+    lang="en";
+  }else{
     document.getElementById("title").innerText =
-      "Optimización y Continuidad IT de Nivel Enterprise";
+      "Tecnología que da confianza y continuidad a tu negocio";
+
     document.getElementById("subtitle").innerText =
-      "Expertos en Microsoft Cloud, Azure, Microsoft 365, seguridad, licenciamiento y continuidad operativa.";
-    lang = "es";
+      "Acompañamos a empresas a crecer con Microsoft Cloud, Azure y Microsoft 365, con seguridad, estabilidad y personas felices usando tecnología sin fricción.";
+
+    lang="es";
   }
 }
 </script>
