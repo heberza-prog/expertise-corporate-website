@@ -120,3 +120,160 @@ background:linear-gradient(90deg,#0078d4,#60a5fa);
 margin:10px 0;
 border-radius:8px;
 }
+/* =========================
+   HERO MICROSOFT STYLE
+========================= */
+
+.hero{
+position:relative;
+display:grid;
+grid-template-columns:1.1fr 1fr;
+align-items:center;
+padding:100px 70px;
+overflow:hidden;
+min-height:85vh;
+background:#f7f8fb;
+}
+
+/* AMBIENT LIGHT */
+.hero-bg{
+position:absolute;
+width:900px;
+height:900px;
+background:
+radial-gradient(circle,
+rgba(0,120,212,0.10),
+transparent 65%);
+top:-300px;
+right:-250px;
+filter:blur(70px);
+z-index:0;
+}
+
+/* CONTENT */
+.hero-content{
+position:relative;
+z-index:2;
+max-width:620px;
+}
+
+/* BADGE */
+.badge{
+display:inline-block;
+padding:8px 14px;
+background:#eaf4ff;
+color:#0078d4;
+border-radius:30px;
+font-size:13px;
+margin-bottom:20px;
+}
+
+/* TITLE */
+.hero h1{
+font-size:58px;
+line-height:1.05;
+margin:0;
+letter-spacing:-1px;
+}
+
+/* TEXT */
+.hero p{
+margin-top:22px;
+font-size:18px;
+line-height:1.7;
+color:#666;
+}
+
+/* BUTTONS */
+.hero-buttons{
+display:flex;
+gap:12px;
+margin-top:30px;
+}
+
+/* BUTTON */
+.btn{
+padding:14px 22px;
+border-radius:10px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+.btn.primary{
+background:#0078d4;
+color:white;
+}
+
+.btn.primary:hover{
+transform:translateY(-3px);
+box-shadow:0 20px 40px rgba(0,120,212,0.25);
+}
+
+.btn.secondary{
+background:white;
+border:1px solid #ddd;
+color:#111;
+}
+
+/* IMAGE */
+.hero-image{
+position:relative;
+z-index:2;
+}
+
+/* IMAGE REAL DEPTH */
+.hero-image img{
+width:100%;
+border-radius:24px;
+box-shadow:
+0 30px 60px rgba(0,0,0,0.15);
+transform:perspective(1200px)
+rotateY(-6deg)
+rotateX(2deg);
+}
+
+/* OVERLAY */
+.hero-image::after{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+90deg,
+#f7f8fb 0%,
+transparent 35%
+);
+border-radius:24px;
+}
+
+/* KPI FLOATING */
+.hero-kpis{
+display:flex;
+gap:16px;
+margin-top:35px;
+}
+
+/* KPI CARD */
+.kpi-card{
+background:white;
+padding:18px 22px;
+border-radius:16px;
+box-shadow:
+0 15px 35px rgba(0,0,0,0.08);
+min-width:130px;
+backdrop-filter:blur(10px);
+}
+
+/* KPI NUMBER */
+.kpi-card h3{
+margin:0;
+font-size:28px;
+color:#0078d4;
+}
+
+/* KPI TEXT */
+.kpi-card span{
+font-size:13px;
+color:#666;
+}
