@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>EXPERTISE S.R.L.</title>
 
 <link rel="stylesheet" href="assets/css/style.css">
+
 <script defer src="assets/js/app.js"></script>
+
 </head>
 
 <body>
 
-<!-- NAVBAR MICROSOFT STYLE -->
+<!-- =========================
+     NAVBAR
+========================= -->
+
 <header class="navbar">
 
-  <img src="assets/img/logo.png" class="logo">
+  <div class="nav-left">
 
-  <nav>
-    <a href="index.html">Overview</a>
-    <a href="infrastructure.html">Infrastructure</a>
-    <a href="optimization.html">Global Optimization</a>
-    <a href="security.html">Security</a>
-    <a href="cases.html">Cases</a>
-    <a href="reports.html">Reports</a>
+    <img src="assets/img/logo.png" class="logo">
+
+  </div>
+
+  <nav class="nav-links">
+
+    <a href="#">Overview</a>
+    <a href="#">Infrastructure</a>
+    <a href="#">Cloud Optimization</a>
+    <a href="#">Security</a>
+    <a href="#">Cases</a>
+    <a href="#">Reports</a>
+
   </nav>
+
+  <div class="nav-right">
+
+    <button onclick="toggleTheme()" class="theme-btn">
+      🌗
+    </button>
+
+  </div>
 
 </header>
 
-<!-- HERO MICROSOFT STYLE -->
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
   <!-- BACKGROUND LIGHT -->
   <div class="hero-bg"></div>
 
+  <!-- FLOATING BLUR -->
+  <div class="blur-circle blur1"></div>
+  <div class="blur-circle blur2"></div>
+
   <!-- CONTENT -->
-  <div class="hero-content">
+  <div class="hero-content reveal">
 
     <span class="badge">
       Microsoft & Azure Enterprise Specialists
@@ -50,29 +78,31 @@
     </p>
 
     <div class="hero-buttons">
-      <a href="optimization.html" class="btn primary">
+
+      <a href="#" class="btn primary">
         Optimizar infraestructura
       </a>
 
-      <a href="cases.html" class="btn secondary">
+      <a href="#" class="btn secondary">
         Ver casos de éxito
       </a>
+
     </div>
 
-    <!-- KPI FLOAT -->
+    <!-- KPI -->
     <div class="hero-kpis">
 
-      <div class="kpi-card">
+      <div class="kpi-card float">
         <h3>99.9%</h3>
         <span>Availability</span>
       </div>
 
-      <div class="kpi-card">
+      <div class="kpi-card float delay1">
         <h3>-35%</h3>
         <span>Cost Optimization</span>
       </div>
 
-      <div class="kpi-card">
+      <div class="kpi-card float delay2">
         <h3>24/7</h3>
         <span>Support Coverage</span>
       </div>
@@ -82,15 +112,73 @@
   </div>
 
   <!-- IMAGE -->
-  <div class="hero-image">
+  <div class="hero-image reveal-right">
 
     <img
-      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-      alt="Enterprise Technology">
+      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop">
 
   </div>
 
 </section>
+
+<!-- =========================
+     ENTERPRISE SECTION
+========================= -->
+
+<section class="enterprise-section">
+
+  <div class="enterprise-grid">
+
+    <div class="enterprise-card reveal">
+
+      <h2>
+        Cloud Optimization
+      </h2>
+
+      <p>
+        Reducción inteligente de costos Azure y optimización de recursos empresariales.
+      </p>
+
+    </div>
+
+    <div class="enterprise-card reveal">
+
+      <h2>
+        Mission Critical Support
+      </h2>
+
+      <p>
+        Soporte especializado 24/7 para operaciones críticas y alta disponibilidad.
+      </p>
+
+    </div>
+
+    <div class="enterprise-card reveal">
+
+      <h2>
+        Security & Governance
+      </h2>
+
+      <p>
+        Arquitecturas seguras y alineadas a mejores prácticas empresariales.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  © 2026 EXPERTISE S.R.L.
+  Enterprise Cloud & Infrastructure Solutions
+
+</footer>
 
 </body>
 </html>
