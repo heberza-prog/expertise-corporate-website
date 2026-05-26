@@ -3,65 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EXPERTISE SRL | Microsoft Cloud & Continuity Services</title>
+  <title>EXPERTISE SRL | Microsoft Cloud Services</title>
 
   <style>
     :root {
-      --ms-blue: #00A4EF;
+      --ms-blue: #0078D4;
       --ms-green: #7FBA00;
       --dark: #111827;
       --gray: #6B7280;
-      --light: #F9FAFB;
+      --light: #F5F7FA;
     }
 
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
       font-family: "Segoe UI", Arial, sans-serif;
+      box-sizing: border-box;
     }
 
     body {
-      background: var(--light);
+      background: white;
       color: var(--dark);
     }
 
     header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      padding: 20px 60px;
-      background: white;
-      border-bottom: 1px solid #e5e7eb;
+      padding: 18px 60px;
+      border-bottom: 1px solid #eee;
       position: sticky;
       top: 0;
+      background: white;
+      z-index: 100;
     }
 
     .logo {
-      font-weight: bold;
+      font-weight: 700;
       color: var(--ms-blue);
-      font-size: 20px;
     }
 
     nav a {
       margin: 0 12px;
       text-decoration: none;
       color: var(--dark);
-      font-weight: 500;
     }
 
     .btn {
       background: var(--ms-blue);
       color: white;
-      padding: 10px 16px;
+      padding: 10px 14px;
       border-radius: 6px;
       text-decoration: none;
     }
 
     .hero {
-      padding: 100px 60px;
-      text-align: center;
-      background: linear-gradient(135deg, #e6f4ff, #ffffff);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 80px 60px;
+      align-items: center;
+      background: linear-gradient(135deg, #eef6ff, white);
     }
 
     .hero h1 {
@@ -70,19 +70,24 @@
     }
 
     .hero p {
-      font-size: 18px;
       color: var(--gray);
-      margin-bottom: 30px;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
     }
 
     .section {
       padding: 80px 60px;
     }
 
-    .section h2 {
+    .title {
       text-align: center;
-      margin-bottom: 40px;
       font-size: 28px;
+      margin-bottom: 40px;
     }
 
     .grid {
@@ -92,34 +97,29 @@
     }
 
     .card {
-      background: white;
-      padding: 20px;
+      background: #fff;
+      border: 1px solid #eee;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 16px;
     }
 
     .card h3 {
-      margin-bottom: 10px;
       color: var(--ms-blue);
+      margin-bottom: 8px;
     }
 
     .plans {
-      background: #f3f4f6;
-    }
-
-    .plan {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-
-    .price {
-      font-size: 26px;
-      font-weight: bold;
-      margin: 10px 0;
-      color: var(--ms-green);
+      background: var(--light);
     }
 
     footer {
@@ -128,12 +128,6 @@
       text-align: center;
       padding: 40px;
     }
-
-    .lang {
-      cursor: pointer;
-      margin-left: 10px;
-      font-weight: bold;
-    }
   </style>
 </head>
 
@@ -141,65 +135,61 @@
 
 <header>
   <div class="logo">EXPERTISE SRL</div>
-
   <nav>
     <a href="#services">Servicios</a>
     <a href="#plans">Planes</a>
-    <a href="#experience">Experiencia</a>
     <a href="#contact">Contacto</a>
-    <span class="lang" onclick="toggleLang()">ES | EN</span>
   </nav>
-
-  <a class="btn" href="#contact">Agenda una reunión</a>
+  <a class="btn" href="#contact">Contactar</a>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <h1 id="title">
-    Aseguramos la continuidad operativa de plataformas Microsoft críticas
-  </h1>
+  <div>
+    <h1>Continuidad y estabilidad en plataformas Microsoft</h1>
+    <p>Azure | Microsoft 365 | Seguridad | Alta Disponibilidad | Optimización Cloud</p>
+    <a class="btn" href="#services">Ver Servicios</a>
+  </div>
 
-  <p id="subtitle">
-    Azure | Microsoft 365 | SharePoint | Seguridad | Alta Disponibilidad | Optimización Cloud
-  </p>
-
-  <a class="btn" href="#services">Ver Servicios</a>
+  <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80">
 </section>
 
 <!-- SERVICIOS -->
 <section class="section" id="services">
-  <h2>Servicios</h2>
+  <h2 class="title">Servicios</h2>
 
   <div class="grid">
 
     <div class="card">
-      <h3>Continuidad Operativa</h3>
-      <p>Soporte, monitoreo, backups, parches y gestión de incidentes críticos.</p>
+      <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80">
+      <div class="card-content">
+        <h3>Continuidad Operativa</h3>
+        <p>Soporte, monitoreo y gestión de infraestructura crítica.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Cloud & Azure</h3>
-      <p>Migraciones, optimización de costos, arquitectura híbrida y alta disponibilidad.</p>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80">
+      <div class="card-content">
+        <h3>Cloud & Azure</h3>
+        <p>Optimización, migración y arquitectura en la nube.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Seguridad y Gobierno</h3>
-      <p>Identity, MFA, auditoría, compliance y control de infraestructura.</p>
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80">
+      <div class="card-content">
+        <h3>Seguridad Microsoft</h3>
+        <p>Identidad, MFA, compliance y protección empresarial.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Microsoft 365 & SharePoint</h3>
-      <p>Arquitectura, metadata, gobernanza y automatización empresarial.</p>
-    </div>
-
-    <div class="card">
-      <h3>SAM & Licenciamiento</h3>
-      <p>Optimización de licencias Microsoft y reducción de costos operativos.</p>
-    </div>
-
-    <div class="card">
-      <h3>Alta Disponibilidad</h3>
-      <p>DRP, clustering, failover y resiliencia empresarial.</p>
+      <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80">
+      <div class="card-content">
+        <h3>Microsoft 365</h3>
+        <p>SharePoint, Teams y gobernanza de información.</p>
+      </div>
     </div>
 
   </div>
@@ -207,85 +197,43 @@
 
 <!-- PLANES -->
 <section class="section plans" id="plans">
-  <h2>Planes de Soporte</h2>
+  <h2 class="title">Planes de Soporte</h2>
 
   <div class="grid">
 
-    <div class="plan">
-      <h3>Base Corporativo</h3>
-      <div class="price">$700</div>
-      <p>Soporte + estabilidad + reportes mensuales</p>
+    <div class="card">
+      <div class="card-content">
+        <h3>Base Corporativo</h3>
+        <p>$700 / mes - Soporte y estabilidad operativa</p>
+      </div>
     </div>
 
-    <div class="plan">
-      <h3>Operación Continua</h3>
-      <div class="price">$1200</div>
-      <p>Monitoreo + optimización + soporte prioritario</p>
+    <div class="card">
+      <div class="card-content">
+        <h3>Operación Continua</h3>
+        <p>$1200 / mes - Monitoreo y optimización</p>
+      </div>
     </div>
 
-    <div class="plan">
-      <h3>Continuidad Total</h3>
-      <div class="price">$1800</div>
-      <p>BCP + estrategia + continuidad empresarial completa</p>
+    <div class="card">
+      <div class="card-content">
+        <h3>Continuidad Total</h3>
+        <p>$1800 / mes - Continuidad empresarial completa</p>
+      </div>
     </div>
-
-  </div>
-</section>
-
-<!-- EXPERIENCIA -->
-<section class="section" id="experience">
-  <h2>Experiencia</h2>
-
-  <div class="grid">
-
-    <div class="card">Banco Ganadero</div>
-    <div class="card">Banco Bisa</div>
-    <div class="card">Tigo</div>
-    <div class="card">CRE</div>
-    <div class="card">Saguapac</div>
-    <div class="card">Farmacorp</div>
 
   </div>
 </section>
 
 <!-- CONTACTO -->
 <section class="section" id="contact">
-  <h2>Contacto</h2>
-
-  <div class="card">
-    <p>Email: hzuniga@expertise.com.bo</p>
-    <p>Phone: +591 78004351</p>
-    <p>Bolivia</p>
-  </div>
+  <h2 class="title">Contacto</h2>
+  <p style="text-align:center;">hzuniga@expertise.com.bo | +591 78004351</p>
 </section>
 
 <footer>
-  © 2026 EXPERTISE SRL - Microsoft Cloud & Continuity Services
+  © 2026 EXPERTISE SRL - Microsoft Cloud Services
 </footer>
-
-<script>
-  let lang = "es";
-
-  function toggleLang() {
-    if (lang === "es") {
-      document.getElementById("title").innerText =
-        "We ensure operational continuity of critical Microsoft platforms";
-
-      document.getElementById("subtitle").innerText =
-        "Azure | Microsoft 365 | SharePoint | Security | High Availability | Cloud Optimization";
-
-      lang = "en";
-    } else {
-      document.getElementById("title").innerText =
-        "Aseguramos la continuidad operativa de plataformas Microsoft críticas";
-
-      document.getElementById("subtitle").innerText =
-        "Azure | Microsoft 365 | SharePoint | Seguridad | Alta Disponibilidad | Optimización Cloud";
-
-      lang = "es";
-    }
-  }
-</script>
 
 </body>
 </html>
