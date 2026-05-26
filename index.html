@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>EXPERTISE S.R.L. | Enterprise IT Solutions</title>
+<title>EXPERTISE S.R.L. | Enterprise IT & Microsoft Solutions</title>
 
 <style>
 
 /* =========================
-   DESIGN SYSTEM (FLUENT ENTERPRISE)
+   DESIGN SYSTEM
 ========================= */
 
 :root{
@@ -21,46 +21,15 @@
   --shadow:0 18px 40px rgba(0,0,0,0.10);
 }
 
-[data-theme="dark"]{
-  --bg:#0f172a;
-  --text:#e5e7eb;
-  --muted:#9ca3af;
-  --surface:#111827;
-  --border:rgba(255,255,255,0.08);
-  --shadow:0 18px 40px rgba(0,0,0,0.45);
-}
-
 body{
   margin:0;
-  font-family:"Segoe UI", Arial, sans-serif;
+  font-family:"Segoe UI", Arial;
   background:var(--bg);
   color:var(--text);
-  overflow-x:hidden;
 }
 
 /* =========================
-   BACKGROUND GLOW (MICROSOFT STYLE)
-========================= */
-
-.bg-glow{
-  position:fixed;
-  width:700px;
-  height:700px;
-  background:radial-gradient(circle, rgba(0,120,212,0.20), transparent 60%);
-  top:-250px;
-  left:-250px;
-  filter:blur(90px);
-  animation:float 14s ease-in-out infinite;
-  z-index:-1;
-}
-
-@keyframes float{
-  0%,100%{transform:translate(0,0);}
-  50%{transform:translate(90px,70px);}
-}
-
-/* =========================
-   NAVBAR
+   NAV
 ========================= */
 
 .nav{
@@ -72,24 +41,20 @@ body{
   position:sticky;
   top:0;
   background:var(--bg);
-  backdrop-filter:blur(12px);
   z-index:10;
 }
 
-/* 🔥 LOGO FIX IMPORTANTE */
 .logo{
   height:42px;
   object-fit:contain;
 }
 
-/* links */
 .nav a{
   margin-left:22px;
   text-decoration:none;
   color:var(--text);
   font-size:14px;
   opacity:0.75;
-  transition:0.3s;
 }
 
 .nav a:hover{
@@ -98,7 +63,7 @@ body{
 }
 
 /* =========================
-   HERO (MICROSOFT STYLE REAL)
+   HERO
 ========================= */
 
 .hero{
@@ -122,7 +87,6 @@ body{
   line-height:1.6;
 }
 
-/* CTA */
 .btn{
   display:inline-block;
   margin-top:25px;
@@ -131,16 +95,12 @@ body{
   color:#fff;
   border-radius:8px;
   text-decoration:none;
-  transition:0.3s;
-  font-weight:500;
 }
 
-.btn:hover{
-  transform:translateY(-2px);
-  box-shadow:var(--shadow);
-}
+/* =========================
+   IMAGE HERO
+========================= */
 
-/* HERO IMAGE */
 .hero img{
   width:100%;
   border-radius:18px;
@@ -148,7 +108,7 @@ body{
 }
 
 /* =========================
-   VALUE STRIP (TIPO MICROSOFT)
+   VALUE STRIP
 ========================= */
 
 .value-strip{
@@ -163,7 +123,6 @@ body{
   padding:18px;
   border-radius:12px;
   border:1px solid var(--border);
-  font-size:14px;
 }
 
 /* =========================
@@ -176,15 +135,10 @@ body{
 
 .section h2{
   font-size:32px;
-  margin-bottom:10px;
-}
-
-.section p{
-  color:var(--muted);
 }
 
 /* =========================
-   SERVICES (ENTERPRISE CARDS)
+   CARDS
 ========================= */
 
 .cards{
@@ -199,12 +153,6 @@ body{
   padding:24px;
   border-radius:14px;
   border:1px solid var(--border);
-  transition:0.35s;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:var(--shadow);
 }
 
 /* =========================
@@ -225,31 +173,6 @@ body{
   border:1px solid var(--border);
 }
 
-.bar{
-  height:10px;
-  border-radius:6px;
-  background:linear-gradient(90deg,#0078d4,#60a5fa);
-  margin:10px 0;
-}
-
-/* =========================
-   FORM
-========================= */
-
-form{
-  display:grid;
-  gap:12px;
-  max-width:520px;
-}
-
-input,textarea{
-  padding:12px;
-  border-radius:8px;
-  border:1px solid var(--border);
-  background:transparent;
-  color:var(--text);
-}
-
 /* =========================
    FOOTER
 ========================= */
@@ -261,36 +184,21 @@ footer{
   font-size:13px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr;}
-  .cards{grid-template-columns:1fr;}
-  .dashboard{grid-template-columns:1fr;}
-  .value-strip{grid-template-columns:1fr;}
-}
-
 </style>
 </head>
 
 <body>
 
-<div class="bg-glow"></div>
-
 <!-- NAV -->
 <div class="nav">
 
-  <!-- 🔥 LOGO TUYO (CORREGIDO) -->
-  <img src="assets/logo.png" class="logo" alt="EXPERTISE S.R.L."/>
+  <img src="assets/logo.png" class="logo" />
 
   <div>
     <a href="#servicios">Soluciones</a>
     <a href="#casos">Casos</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#contacto">Contacto</a>
-    <a onclick="toggleTheme()">🌗</a>
   </div>
 
 </div>
@@ -299,27 +207,29 @@ footer{
 <div class="hero">
 
   <div>
-    <h1>Transformación digital que impulsa empresas que crecen</h1>
+
+    <!-- 🔥 TITULAR AJUSTADO -->
+    <h1>Diseñamos y optimizamos entornos tecnológicos para empresas de alto desempeño</h1>
 
     <p>
-      Modernizamos infraestructura, optimizamos costos y fortalecemos la seguridad
-      con soluciones IT de nivel enterprise diseñadas para entornos críticos.
+      Especialistas en tecnologías Microsoft, Azure y entornos de misión crítica con más de 15 años de experiencia en infraestructura empresarial.
     </p>
 
     <a class="btn" href="#contacto">Hablar con un especialista</a>
+
   </div>
 
-  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-       alt="Enterprise IT"
-  />
+  <!-- 🔥 IMAGEN NUEVA MICROSOFT STYLE -->
+  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+       alt="Enterprise IT"/>
 
 </div>
 
-<!-- VALUE STRIP -->
+<!-- VALUE -->
 <div class="value-strip">
-  <div class="value">✔ Infraestructura moderna y escalable</div>
-  <div class="value">✔ Seguridad y continuidad operativa</div>
-  <div class="value">✔ Optimización real de costos IT</div>
+  <div class="value">✔ Continuidad operativa 24/7</div>
+  <div class="value">✔ Optimización de infraestructura y costos</div>
+  <div class="value">✔ Seguridad y gobernanza empresarial</div>
 </div>
 
 <!-- SERVICIOS -->
@@ -331,17 +241,17 @@ footer{
 
     <div class="card">
       <h3>Infraestructura IT</h3>
-      <p>Arquitecturas robustas, redes, servidores y virtualización empresarial.</p>
+      <p>Arquitectura, redes, servidores y entornos empresariales escalables.</p>
     </div>
 
     <div class="card">
       <h3>Transformación Digital</h3>
-      <p>Modernización de sistemas, automatización y migración a entornos cloud.</p>
+      <p>Modernización de sistemas, cloud computing y automatización empresarial.</p>
     </div>
 
     <div class="card">
       <h3>Ciberseguridad</h3>
-      <p>Protección avanzada, auditoría y fortalecimiento de entornos críticos.</p>
+      <p>Protección, auditoría y fortalecimiento de entornos críticos.</p>
     </div>
 
   </div>
@@ -350,21 +260,19 @@ footer{
 <!-- CASOS -->
 <div class="section" id="casos">
 
-  <h2>Impacto empresarial</h2>
+  <h2>Impacto en entornos reales</h2>
 
   <div class="dashboard">
 
     <div class="box">
       <h3>Optimización de costos</h3>
-      <div class="bar" style="width:90%"></div>
-      <div class="bar" style="width:70%"></div>
-      <div class="bar" style="width:50%"></div>
+      <p>Reducción y eficiencia en infraestructura cloud y local mediante análisis técnico especializado.</p>
     </div>
 
     <div class="box">
-      <p>✔ -35% reducción de costos IT</p>
-      <p>✔ +60% eficiencia operativa</p>
-      <p>✔ 99.9% disponibilidad</p>
+      <p>✔ Alta disponibilidad garantizada</p>
+      <p>✔ Optimización de recursos IT</p>
+      <p>✔ Escalabilidad empresarial</p>
     </div>
 
   </div>
@@ -375,27 +283,13 @@ footer{
 
   <h2>Contacto</h2>
 
-  <form>
-    <input placeholder="Nombre"/>
-    <input placeholder="Empresa"/>
-    <input placeholder="Email"/>
-    <textarea placeholder="Mensaje"></textarea>
-    <button class="btn" type="submit">Enviar solicitud</button>
-  </form>
+  <a class="btn" href="mailto:contacto@empresa.com">Solicitar evaluación técnica</a>
 
 </div>
 
 <footer>
-© 2026 EXPERTISE S.R.L. — Enterprise IT & Digital Transformation
+© 2026 EXPERTISE S.R.L. — Enterprise IT & Microsoft Solutions
 </footer>
-
-<script>
-function toggleTheme(){
-  const root=document.documentElement;
-  const current=root.getAttribute("data-theme");
-  root.setAttribute("data-theme", current==="dark"?"light":"dark");
-}
-</script>
 
 </body>
 </html>
