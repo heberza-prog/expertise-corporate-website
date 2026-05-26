@@ -3,150 +3,238 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EXPERTISE SRL | Microsoft Cloud & Infrastructure Experts</title>
 
-<!-- Microsoft-like font -->
+<title>EXPERTISE SRL | Microsoft Solutions Partner</title>
+
+<!-- Fluent-like font -->
 <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-body {
-    margin:0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background:#fff;
-    color:#1b1b1b;
+/* =========================
+   BASE SYSTEM (MICROSOFT STYLE)
+========================= */
+
+:root{
+    --ms-blue:#0078D4;
+    --ms-dark:#1a1a1a;
+    --ms-light:#ffffff;
+    --ms-gray:#f5f5f5;
+    --ms-border:#e6e6e6;
 }
 
-/* HEADER MICROSOFT STYLE */
-.header {
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+}
+
+body{
+    background:#fff;
+    color:#111;
+}
+
+/* =========================
+   HEADER (MICROSOFT STYLE)
+========================= */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter: blur(12px);
+    border-bottom:1px solid var(--ms-border);
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:12px 60px;
-    border-bottom:1px solid #eee;
-    background:#fff;
+    padding:14px 60px;
+    z-index:1000;
 }
 
-.logo {
+.logo{
     font-weight:700;
-    font-size:18px;
-    color:#000;
+    letter-spacing:0.5px;
 }
 
-.nav a {
-    margin:0 12px;
+.logo span{
+    color:var(--ms-blue);
+}
+
+.nav a{
+    margin:0 14px;
     text-decoration:none;
     color:#333;
     font-size:14px;
 }
 
-.lang button {
-    border:none;
-    background:#f3f3f3;
-    padding:6px 10px;
-    margin-left:5px;
-    cursor:pointer;
-    border-radius:4px;
+.nav a:hover{
+    color:var(--ms-blue);
 }
 
-/* HERO MICROSOFT STYLE */
-.hero {
+/* =========================
+   HERO (MICROSOFT CLOUD STYLE)
+========================= */
+
+.hero{
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31") center/cover no-repeat;
     position:relative;
-    height:80vh;
-    background:url('https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51') center/cover no-repeat;
     display:flex;
     align-items:center;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+}
+
+.hero-content{
+    position:relative;
+    padding:0 80px;
+    max-width:650px;
     color:white;
 }
 
-.hero-overlay {
-    position:absolute;
-    inset:0;
-    background:linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+.hero h1{
+    font-size:52px;
+    font-weight:600;
+    line-height:1.1;
 }
 
-.hero-content {
-    position:relative;
-    padding:0 80px;
-    max-width:600px;
-}
-
-.hero h1 {
-    font-size:48px;
-    margin:0;
-}
-
-.hero p {
+.hero p{
+    margin-top:16px;
     font-size:18px;
-    margin-top:15px;
     opacity:0.9;
 }
 
-.btn {
-    margin-top:20px;
-    padding:10px 18px;
-    background:#0078d4;
+.btn{
+    margin-top:25px;
+    padding:12px 20px;
+    background:var(--ms-blue);
     border:none;
     color:white;
     border-radius:4px;
     cursor:pointer;
-}
-
-/* SECTIONS MICROSOFT TILES */
-.section {
-    padding:80px;
-}
-
-.section h2 {
-    font-size:32px;
-    margin-bottom:30px;
-}
-
-.grid {
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.card {
-    border:1px solid #eee;
-    border-radius:10px;
-    overflow:hidden;
+    font-weight:500;
     transition:0.3s;
 }
 
-.card:hover {
-    transform:translateY(-5px);
-    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+.btn:hover{
+    background:#005a9e;
 }
 
-.card img {
+/* =========================
+   SECTION SYSTEM
+========================= */
+
+.section{
+    padding:100px 80px;
+}
+
+.section-title{
+    font-size:34px;
+    margin-bottom:40px;
+}
+
+/* =========================
+   GRID (MICROSOFT TILES)
+========================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.card{
+    border:1px solid var(--ms-border);
+    border-radius:12px;
+    overflow:hidden;
+    background:white;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+
+.card img{
     width:100%;
-    height:180px;
+    height:190px;
     object-fit:cover;
 }
 
-.card-content {
-    padding:20px;
+.card-content{
+    padding:22px;
 }
 
-.card-content h3 {
-    margin:0;
+.card h3{
     font-size:18px;
+    margin-bottom:8px;
 }
 
-.card-content p {
-    font-size:14px;
-    color:#666;
+/* =========================
+   ANIMATIONS (MICROSOFT FEEL)
+========================= */
+
+.fade-in{
+    opacity:0;
+    transform:translateY(20px);
+    transition:all 0.8s ease;
 }
 
-/* FOOTER */
-footer {
-    background:#f5f5f5;
-    padding:40px;
+.fade-in.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#f3f3f3;
+    padding:50px;
     text-align:center;
     font-size:13px;
     color:#666;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.header{
+    padding:12px 20px;
+}
+
+.hero-content{
+    padding:0 20px;
+}
+
+.hero h1{
+    font-size:36px;
+}
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+.section{
+    padding:60px 20px;
+}
+
+.nav{
+    display:none;
+}
+
 }
 
 </style>
@@ -156,19 +244,14 @@ footer {
 
 <!-- HEADER -->
 <div class="header">
-    <div class="logo">EXPERTISE SRL</div>
+    <div class="logo">EXPERTISE <span>SRL</span></div>
 
     <div class="nav">
         <a href="#">Servicios</a>
         <a href="#">Cloud</a>
         <a href="#">Azure</a>
-        <a href="#">M365</a>
+        <a href="#">Seguridad</a>
         <a href="#">Contacto</a>
-    </div>
-
-    <div class="lang">
-        <button onclick="setLang('es')">ES</button>
-        <button onclick="setLang('en')">EN</button>
     </div>
 </div>
 
@@ -176,10 +259,10 @@ footer {
 <div class="hero">
     <div class="hero-overlay"></div>
 
-    <div class="hero-content">
-        <h1 id="title">Infraestructura Microsoft de Alto Nivel</h1>
+    <div class="hero-content fade-in">
+        <h1 id="title">Infraestructura Microsoft de Nivel Enterprise</h1>
         <p id="subtitle">
-            Optimización, Cloud Azure, Seguridad, Continuidad Operativa y Soporte Empresarial.
+            Azure • Microsoft 365 • Seguridad • Continuidad Operativa • Optimización Cloud
         </p>
         <button class="btn" id="cta">Explorar Servicios</button>
     </div>
@@ -187,31 +270,32 @@ footer {
 
 <!-- SERVICES -->
 <div class="section">
-    <h2 id="servicesTitle">Nuestros Servicios</h2>
+
+    <div class="section-title fade-in" id="st1">Servicios Estratégicos</div>
 
     <div class="grid">
 
-        <div class="card">
+        <div class="card fade-in">
             <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
             <div class="card-content">
-                <h3>Cloud & Azure</h3>
-                <p>Arquitectura cloud, migraciones y optimización de costos en Azure.</p>
+                <h3>Cloud & Azure Architecture</h3>
+                <p>Diseño, migración y optimización de infraestructura cloud empresarial.</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card fade-in">
             <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
             <div class="card-content">
-                <h3>Microsoft 365</h3>
-                <p>Implementación, administración y seguridad empresarial.</p>
+                <h3>Microsoft 365 Enterprise</h3>
+                <p>Implementación segura y escalable de productividad corporativa.</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card fade-in">
             <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
             <div class="card-content">
-                <h3>Seguridad</h3>
-                <p>Protección avanzada de infraestructura y datos críticos.</p>
+                <h3>Cybersecurity & Compliance</h3>
+                <p>Protección avanzada, Zero Trust y seguridad de infraestructura.</p>
             </div>
         </div>
 
@@ -220,32 +304,26 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-    EXPERTISE SRL © 2026 - Microsoft Partner Solutions
+    EXPERTISE SRL © 2026 — Microsoft Solutions Partner | Cloud & Infrastructure Experts
 </footer>
 
 <script>
 
-let lang = "es";
+/* =========================
+   SCROLL REVEAL (MICROSOFT FEEL)
+========================= */
 
-function setLang(l){
+const elements = document.querySelectorAll('.fade-in');
 
-lang = l;
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
 
-if(l === "en"){
-document.getElementById("title").innerText = "High-Level Microsoft Infrastructure";
-document.getElementById("subtitle").innerText = "Optimization, Azure Cloud, Security, Operational Continuity and Enterprise Support.";
-document.getElementById("cta").innerText = "Explore Services";
-document.getElementById("servicesTitle").innerText = "Our Services";
-}
-
-if(l === "es"){
-document.getElementById("title").innerText = "Infraestructura Microsoft de Alto Nivel";
-document.getElementById("subtitle").innerText = "Optimización, Cloud Azure, Seguridad, Continuidad Operativa y Soporte Empresarial.";
-document.getElementById("cta").innerText = "Explorar Servicios";
-document.getElementById("servicesTitle").innerText = "Nuestros Servicios";
-}
-
-}
+elements.forEach(el=>observer.observe(el));
 
 </script>
 
