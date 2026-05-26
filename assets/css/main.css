@@ -3,119 +3,75 @@ margin:0;
 font-family:"Segoe UI", Arial;
 background:#ffffff;
 color:#111;
-overflow-x:hidden;
+transition:0.4s;
 }
 
-/* NAV */
+body.dark{
+background:#0f172a;
+color:#e5e7eb;
+}
+
 .nav{
 display:flex;
 justify-content:space-between;
-padding:18px 60px;
+padding:18px 50px;
+border-bottom:1px solid #ddd;
 position:sticky;
 top:0;
-background:rgba(255,255,255,0.8);
-backdrop-filter:blur(20px);
-border-bottom:1px solid rgba(0,0,0,0.08);
+background:white;
 }
 
 .logo{height:40px;}
 
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#333;
-font-size:14px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#0078d4;
-}
-
-.highlight{
-color:#0078d4;
-font-weight:600;
-}
-
-/* HERO */
 .hero{
 display:grid;
 grid-template-columns:1.2fr 1fr;
-padding:120px 60px;
+padding:100px 60px;
 gap:40px;
 align-items:center;
 }
 
-.hero h1{
-font-size:54px;
-line-height:1.05;
-}
-
-.hero p{
-color:#555;
-font-size:18px;
-}
-
 .hero img{
 width:100%;
-border-radius:18px;
-box-shadow:0 20px 60px rgba(0,0,0,0.15);
+border-radius:16px;
 }
 
-/* BUTTON */
+.hero h1{
+font-size:48px;
+}
+
 .btn{
-display:inline-block;
-margin-top:20px;
 background:#0078d4;
 color:white;
-padding:14px 22px;
-border-radius:10px;
+padding:12px 18px;
+border-radius:8px;
+display:inline-block;
 text-decoration:none;
-transition:0.3s;
 }
 
-.btn:hover{
-transform:translateY(-2px);
-box-shadow:0 15px 30px rgba(0,120,212,0.3);
+.strip{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+padding:40px 60px;
+background:#f5f7fb;
 }
 
-/* VALUE */
-.value{
+.cards{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:20px;
 padding:60px;
-background:#f5f7fb;
 }
 
 .card{
 padding:20px;
-background:white;
+background:#f5f7fb;
 border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
-transition:0.4s;
 }
 
-.card:hover{
-transform:translateY(-6px);
-}
-
-/* CTA */
-.cta{
-padding:80px;
-text-align:center;
-background:linear-gradient(120deg,#0078d4,#60a5fa);
-color:white;
-}
-
-/* ANIMATIONS */
-.reveal{
-opacity:0;
-transform:translateY(20px);
-transition:all 0.8s ease;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0);
+.news-card{
+padding:30px;
+margin:20px 60px;
+background:#f5f7fb;
+border-radius:12px;
 }
