@@ -1,239 +1,344 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EXPERTISE SRL | Microsoft Cloud Services</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EXPERTISE SRL | Microsoft Cloud & Continuity</title>
 
-  <style>
-    :root {
-      --ms-blue: #0078D4;
-      --ms-green: #7FBA00;
-      --dark: #111827;
-      --gray: #6B7280;
-      --light: #F5F7FA;
-    }
+<style>
+:root{
+  --blue:#0078D4;
+  --green:#7FBA00;
+  --dark:#111827;
+  --gray:#6B7280;
+  --light:#F5F7FA;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      box-sizing: border-box;
-    }
+*{
+  margin:0;
+  padding:0;
+  font-family:"Segoe UI", Arial;
+  box-sizing:border-box;
+}
 
-    body {
-      background: white;
-      color: var(--dark);
-    }
+body{
+  background:white;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      padding: 18px 60px;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      background: white;
-      z-index: 100;
-    }
+/* HEADER MICROSOFT STYLE */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 60px;
+  border-bottom:1px solid #eee;
+}
 
-    .logo {
-      font-weight: 700;
-      color: var(--ms-blue);
-    }
+.logo{
+  font-weight:700;
+  color:var(--blue);
+}
 
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: var(--dark);
-    }
+nav a{
+  margin:0 10px;
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
+}
 
-    .btn {
-      background: var(--ms-blue);
-      color: white;
-      padding: 10px 14px;
-      border-radius: 6px;
-      text-decoration: none;
-    }
+.lang{
+  font-size:13px;
+  cursor:pointer;
+  margin-left:10px;
+  color:var(--gray);
+}
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding: 80px 60px;
-      align-items: center;
-      background: linear-gradient(135deg, #eef6ff, white);
-    }
+/* HERO MICROSOFT STYLE */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  padding:80px 60px;
+  background:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80');
+  background-size:cover;
+  color:white;
+  position:relative;
+}
 
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+}
 
-    .hero p {
-      color: var(--gray);
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
+.hero-content{
+  position:relative;
+}
 
-    .hero img {
-      width: 100%;
-      border-radius: 12px;
-    }
+.hero h1{
+  font-size:44px;
+  margin-bottom:15px;
+}
 
-    .section {
-      padding: 80px 60px;
-    }
+.hero p{
+  font-size:18px;
+  margin-bottom:20px;
+  opacity:0.9;
+}
 
-    .title {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 40px;
-    }
+.btn{
+  background:var(--blue);
+  padding:10px 16px;
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+/* SECTIONS */
+.section{
+  padding:80px 60px;
+}
 
-    .card {
-      background: #fff;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      overflow: hidden;
-    }
+.title{
+  font-size:28px;
+  text-align:center;
+  margin-bottom:40px;
+}
 
-    .card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
 
-    .card-content {
-      padding: 16px;
-    }
+/* CARD MICROSOFT STYLE */
+.card{
+  background:white;
+  border:1px solid #eee;
+  border-radius:12px;
+  overflow:hidden;
+  transition:0.3s;
+}
 
-    .card h3 {
-      color: var(--ms-blue);
-      margin-bottom: 8px;
-    }
+.card:hover{
+  transform:translateY(-5px);
+}
 
-    .plans {
-      background: var(--light);
-    }
+.card img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+}
 
-    footer {
-      background: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 40px;
-    }
-  </style>
+.card-content{
+  padding:16px;
+}
+
+.card h3{
+  color:var(--blue);
+  margin-bottom:6px;
+}
+
+/* SPLIT SECTION */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.split img{
+  width:100%;
+  border-radius:12px;
+}
+
+/* FOOTER */
+footer{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:40px;
+}
+
+/* LANG SWITCH */
+.en{display:none;}
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <div class="logo">EXPERTISE SRL</div>
-  <nav>
-    <a href="#services">Servicios</a>
-    <a href="#plans">Planes</a>
-    <a href="#contact">Contacto</a>
-  </nav>
-  <a class="btn" href="#contact">Contactar</a>
+<div class="logo">EXPERTISE SRL</div>
+
+<nav>
+<a href="#services">Servicios</a>
+<a href="#plans">Planes</a>
+<a href="#contact">Contacto</a>
+<span class="lang" onclick="toggleLang()">ES | EN</span>
+</nav>
+
+<a class="btn" href="#contact">Contactar</a>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div>
-    <h1>Continuidad y estabilidad en plataformas Microsoft</h1>
-    <p>Azure | Microsoft 365 | Seguridad | Alta Disponibilidad | Optimización Cloud</p>
-    <a class="btn" href="#services">Ver Servicios</a>
-  </div>
 
-  <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80">
+<div class="hero-content es">
+<h1>Continuidad y seguridad en plataformas Microsoft</h1>
+<p>Azure | Microsoft 365 | Seguridad | Alta Disponibilidad | Optimización Cloud</p>
+<a class="btn" href="#services">Ver Servicios</a>
+</div>
+
+<div class="hero-content en">
+<h1>Continuity and security for Microsoft platforms</h1>
+<p>Azure | Microsoft 365 | Security | High Availability | Cloud Optimization</p>
+<a class="btn" href="#services">View Services</a>
+</div>
+
 </section>
 
-<!-- SERVICIOS -->
+<!-- SERVICES -->
 <section class="section" id="services">
-  <h2 class="title">Servicios</h2>
 
-  <div class="grid">
+<div class="es">
+<h2 class="title">Servicios</h2>
+</div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80">
-      <div class="card-content">
-        <h3>Continuidad Operativa</h3>
-        <p>Soporte, monitoreo y gestión de infraestructura crítica.</p>
-      </div>
-    </div>
+<div class="en">
+<h2 class="title">Services</h2>
+</div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80">
-      <div class="card-content">
-        <h3>Cloud & Azure</h3>
-        <p>Optimización, migración y arquitectura en la nube.</p>
-      </div>
-    </div>
+<div class="grid">
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80">
-      <div class="card-content">
-        <h3>Seguridad Microsoft</h3>
-        <p>Identidad, MFA, compliance y protección empresarial.</p>
-      </div>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80">
+<div class="card-content es">
+<h3>Cloud & Azure</h3>
+<p>Migración, optimización y arquitectura cloud empresarial.</p>
+</div>
+<div class="card-content en">
+<h3>Cloud & Azure</h3>
+<p>Migration, optimization and enterprise cloud architecture.</p>
+</div>
+</div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80">
-      <div class="card-content">
-        <h3>Microsoft 365</h3>
-        <p>SharePoint, Teams y gobernanza de información.</p>
-      </div>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80">
+<div class="card-content es">
+<h3>Continuidad Operativa</h3>
+<p>Soporte, monitoreo y estabilidad de sistemas críticos.</p>
+</div>
+<div class="card-content en">
+<h3>Operational Continuity</h3>
+<p>Support, monitoring and stability of critical systems.</p>
+</div>
+</div>
 
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80">
+<div class="card-content es">
+<h3>Seguridad Microsoft</h3>
+<p>Protección, identidad y cumplimiento empresarial.</p>
+</div>
+<div class="card-content en">
+<h3>Microsoft Security</h3>
+<p>Protection, identity and enterprise compliance.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80">
+<div class="card-content es">
+<h3>Microsoft 365</h3>
+<p>Productividad, colaboración y gobernanza de información.</p>
+</div>
+<div class="card-content en">
+<h3>Microsoft 365</h3>
+<p>Productivity, collaboration and information governance.</p>
+</div>
+</div>
+
+</div>
 </section>
 
-<!-- PLANES -->
-<section class="section plans" id="plans">
-  <h2 class="title">Planes de Soporte</h2>
+<!-- SPLIT IMAGE SECTION -->
+<section class="section split">
 
-  <div class="grid">
+<div>
+<img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80">
+</div>
 
-    <div class="card">
-      <div class="card-content">
-        <h3>Base Corporativo</h3>
-        <p>$700 / mes - Soporte y estabilidad operativa</p>
-      </div>
-    </div>
+<div class="es">
+<h2>Infraestructura moderna y segura</h2>
+<p>Ayudamos a empresas a operar con alta disponibilidad, seguridad y eficiencia en Microsoft Azure.</p>
+</div>
 
-    <div class="card">
-      <div class="card-content">
-        <h3>Operación Continua</h3>
-        <p>$1200 / mes - Monitoreo y optimización</p>
-      </div>
-    </div>
+<div class="en">
+<h2>Modern and secure infrastructure</h2>
+<p>We help companies operate with high availability, security and efficiency on Microsoft Azure.</p>
+</div>
 
-    <div class="card">
-      <div class="card-content">
-        <h3>Continuidad Total</h3>
-        <p>$1800 / mes - Continuidad empresarial completa</p>
-      </div>
-    </div>
-
-  </div>
 </section>
 
-<!-- CONTACTO -->
+<!-- PLANS -->
+<section class="section" id="plans">
+<h2 class="title es">Planes de Soporte</h2>
+<h2 class="title en">Support Plans</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="card-content">
+<h3>Base Corporativo</h3>
+<p>$700 / mes - Soporte y estabilidad</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Operación Continua</h3>
+<p>$1200 / mes - Monitoreo y optimización</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Continuidad Total</h3>
+<p>$1800 / mes - Continuidad empresarial</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
 <section class="section" id="contact">
-  <h2 class="title">Contacto</h2>
-  <p style="text-align:center;">hzuniga@expertise.com.bo | +591 78004351</p>
+<h2 class="title es">Contacto</h2>
+<h2 class="title en">Contact</h2>
+
+<p style="text-align:center;">
+hzuniga@expertise.com.bo | +591 78004351
+</p>
 </section>
 
 <footer>
-  © 2026 EXPERTISE SRL - Microsoft Cloud Services
+© 2026 EXPERTISE SRL | Microsoft Cloud & Continuity Services
 </footer>
+
+<script>
+function toggleLang(){
+  document.querySelectorAll(".es").forEach(e=>{
+    e.style.display = (e.style.display==="none") ? "block" : "none";
+  });
+
+  document.querySelectorAll(".en").forEach(e=>{
+    e.style.display = (e.style.display==="block") ? "none" : "block";
+  });
+}
+</script>
 
 </body>
 </html>
