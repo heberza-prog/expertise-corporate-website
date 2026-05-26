@@ -1,304 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>EXPERTISE SRL | Microsoft Production Experience</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EXPERTISE S.R.L.</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #1a1a1a;
+      background: #ffffff;
+    }
 
-<style>
-:root{
-  --blue:#0078D4;
-  --green:#2EB67D;
-  --text:#1b1b1b;
-  --muted:#5f6368;
-  --bg:#ffffff;
-  --soft:#f5f7fb;
-}
+    /* NAVBAR */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 60px;
+      border-bottom: 1px solid #eee;
+    }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",sans-serif;}
+    .logo {
+      height: 40px;
+    }
 
-body{
-  background:var(--bg);
-  color:var(--text);
-  overflow-x:hidden;
-}
+    .nav-links a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
 
-/* ================= NAVBAR ================= */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 60px;
-  background:rgba(255,255,255,0.75);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(0,0,0,0.06);
-  z-index:1000;
-}
+    .nav-links a:hover {
+      color: #0078d4;
+    }
 
-.logo img{
-  height:34px;
-  transition:0.3s;
-}
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 80px 60px;
+      align-items: center;
+      background: linear-gradient(to right, #f9fbfd, #ffffff);
+    }
 
-nav a{
-  margin:0 12px;
-  text-decoration:none;
-  color:#333;
-  font-size:14px;
-  transition:0.3s;
-}
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
 
-nav a:hover{color:var(--blue);}
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.5;
+    }
 
-.lang{cursor:pointer;font-size:13px;color:#666;}
+    .btn {
+      margin-top: 20px;
+      display: inline-block;
+      background: #0078d4;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
 
-/* ================= HERO ================= */
-.hero{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:140px 60px 100px;
-  background:linear-gradient(135deg,#ffffff,#f3f8ff);
-  position:relative;
-}
+    .btn:hover {
+      background: #005a9e;
+    }
 
-.hero::before{
-  content:"";
-  position:absolute;
-  width:600px;
-  height:600px;
-  background:radial-gradient(circle, rgba(0,120,212,0.10), transparent 60%);
-  top:-120px;
-  right:-120px;
-  border-radius:50%;
-}
+    .hero-img {
+      width: 100%;
+      max-width: 450px;
+      justify-self: end;
+    }
 
-.hero-text{max-width:52%;animation:fadeUp 1s ease-out;position:relative;z-index:2;}
+    /* CARDS */
+    .section {
+      padding: 60px;
+      background: #fff;
+    }
 
-.hero h1{font-size:54px;line-height:1.1;}
-.hero p{margin-top:15px;font-size:18px;color:var(--muted);line-height:1.6;}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+    }
 
-.btn{
-  display:inline-block;
-  margin-top:22px;
-  padding:12px 22px;
-  background:var(--blue);
-  color:white;
-  border-radius:6px;
-  text-decoration:none;
-  transition:0.3s;
-}
+    .card {
+      border: 1px solid #eee;
+      padding: 24px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
 
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(0,120,212,0.25);}
+    .card:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
 
-.hero img{
-  width:520px;
-  border-radius:16px;
-  box-shadow:0 30px 70px rgba(0,0,0,0.12);
-  animation:float 5s ease-in-out infinite;
-  position:relative;
-  z-index:2;
-}
+    /* FOOTER */
+    .footer {
+      padding: 40px 60px;
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      color: #666;
+    }
 
-/* ================= SECTIONS ================= */
-.section{padding:90px 60px;}
-.section h2{font-size:34px;margin-bottom:40px;opacity:0;transform:translateY(30px);transition:1s ease;}
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:26px;
-}
+      .hero-img {
+        justify-self: center;
+        margin-top: 30px;
+      }
 
-.card{
-  background:white;
-  border-radius:16px;
-  overflow:hidden;
-  border:1px solid #eee;
-  transition:0.5s;
-  opacity:0;
-  transform:translateY(40px);
-}
-
-.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.08);}
-
-.card img{width:100%;height:200px;object-fit:cover;}
-.card-content{padding:18px;}
-.card h3{margin-bottom:10px;}
-
-/* ================= FOOTER ================= */
-footer{
-  text-align:center;
-  padding:40px;
-  background:#0f0f0f;
-  color:white;
-}
-
-/* ================= ANIMATIONS ================= */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(40px);}
-  to{opacity:1;transform:translateY(0);}
-}
-
-@keyframes float{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-10px);}
-}
-
-/* ================= RESPONSIVE ================= */
-@media(max-width:900px){
-  .hero{flex-direction:column;text-align:center;}
-  .hero-text{max-width:100%;}
-  .hero img{width:90%;margin-top:30px;}
-  .grid{grid-template-columns:1fr;}
-  nav{padding:14px 20px;flex-wrap:wrap;}
-}
-</style>
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">
-    <img src="data:image/png;base64,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
+  <!-- NAV -->
+  <div class="nav">
+    <img src="assets/logo.png" class="logo" alt="Expertise S.R.L." />
+    <div class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Soluciones</a>
+      <a href="#">Contacto</a>
+    </div>
   </div>
 
-  <div>
-    <a href="#services">Servicios</a>
-    <a href="#cloud">Cloud</a>
-    <a href="#support">Soporte</a>
-    <a href="#contact">Contacto</a>
-    <span class="lang" onclick="toggleLang()">ES / EN</span>
-  </div>
-</nav>
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h1>Soluciones tecnológicas que impulsan tu negocio</h1>
+      <p>
+        En EXPERTISE S.R.L. ayudamos a empresas a modernizar su infraestructura,
+        optimizar procesos y escalar con tecnología confiable.
+      </p>
+      <a class="btn" href="#">Conoce nuestros servicios</a>
+    </div>
 
-<section class="hero">
-
-  <div class="hero-text">
-    <h1 id="title">Tecnología que da confianza y continuidad</h1>
-
-    <p id="subtitle">
-      Ayudamos a empresas a operar con estabilidad, seguridad y crecimiento usando Microsoft Cloud, Azure y Microsoft 365 con enfoque estratégico y humano.
-    </p>
-
-    <a class="btn" href="#contact">Solicitar diagnóstico</a>
+    <div>
+      <img class="hero-img" src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" />
+    </div>
   </div>
 
-  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000" />
+  <!-- SERVICES -->
+  <div class="section">
+    <h2>Servicios principales</h2>
+    <p>Soluciones empresariales diseñadas para alto rendimiento.</p>
 
-</section>
+    <div class="cards">
+      <div class="card">
+        <h3>Infraestructura IT</h3>
+        <p>Diseño, implementación y soporte de entornos empresariales.</p>
+      </div>
 
-<section class="section" id="services">
-  <h2 class="reveal">Servicios Principales</h2>
-
-  <div class="grid">
-
-    <div class="card reveal">
-      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900">
-      <div class="card-content">
+      <div class="card">
         <h3>Cloud & Azure</h3>
-        <p>Arquitecturas modernas en Microsoft Azure para continuidad operativa.</p>
+        <p>Migración, administración y optimización en la nube.</p>
+      </div>
+
+      <div class="card">
+        <h3>Ciberseguridad</h3>
+        <p>Protección de datos, redes y sistemas críticos.</p>
       </div>
     </div>
-
-    <div class="card reveal">
-      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=900">
-      <div class="card-content">
-        <h3>Microsoft 365</h3>
-        <p>Colaboración empresarial segura, moderna y eficiente.</p>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900">
-      <div class="card-content">
-        <h3>Seguridad TI</h3>
-        <p>Protección integral de datos, identidades y dispositivos.</p>
-      </div>
-    </div>
-
   </div>
-</section>
 
-<section class="section" id="support" style="background:#f6f9ff;">
-  <h2 class="reveal">Planes de Soporte</h2>
-
-  <div class="grid">
-
-    <div class="card reveal">
-      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=900">
-      <div class="card-content">
-        <h3>Base Corporativo</h3>
-        <p>Soporte confiable para operación diaria.</p>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <img src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=900">
-      <div class="card-content">
-        <h3>Operación Continua</h3>
-        <p>Optimización y prevención constante.</p>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900">
-      <div class="card-content">
-        <h3>Continuidad Total</h3>
-        <p>Estrategia avanzada de resiliencia TI.</p>
-      </div>
-    </div>
-
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 EXPERTISE S.R.L. | Todos los derechos reservados
   </div>
-</section>
-
-<section class="section" id="contact">
-  <h2>Contacto</h2>
-  <p>Email: hzuniga@expertise.com.bo</p>
-  <p>Tel: +591 78004351</p>
-</section>
-
-<footer>
-  © 2026 EXPERTISE SRL — Microsoft Production Inspired Experience
-</footer>
-
-<script>
-
-let lang="es";
-
-function toggleLang(){
-  if(lang==="es"){
-    document.getElementById("title").innerText = "Technology that brings trust and continuity";
-    document.getElementById("subtitle").innerText = "We help companies operate with stability, security and growth using Microsoft Cloud and Azure.";
-    lang="en";
-  } else {
-    document.getElementById("title").innerText = "Tecnología que da confianza y continuidad";
-    document.getElementById("subtitle").innerText = "Ayudamos a empresas a operar con estabilidad, seguridad y crecimiento usando Microsoft Cloud, Azure y Microsoft 365 con enfoque estratégico y humano.";
-    lang="es";
-  }
-}
-
-function reveal(){
-  let elements = document.querySelectorAll(".reveal");
-  for(let el of elements){
-    let top = el.getBoundingClientRect().top;
-    let windowHeight = window.innerHeight;
-    if(top < windowHeight - 80){
-      el.style.opacity = 1;
-      el.style.transform = "translateY(0)";
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal);
-window.addEventListener("load", reveal);
-
-</script>
 
 </body>
 </html>
