@@ -1,188 +1,268 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EXPERTISE S.R.L.</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EXPERTISE S.R.L.</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: #1a1a1a;
-      background: #ffffff;
-    }
+<style>
+/* =========================
+   MICROSOFT FLUENT STYLE
+========================= */
 
-    /* NAVBAR */
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 60px;
-      border-bottom: 1px solid #eee;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
 
-    .logo {
-      height: 40px;
-    }
+body {
+  background: #ffffff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
 
-    .nav-links a {
-      margin-left: 24px;
-      text-decoration: none;
-      color: #333;
-      font-size: 14px;
-    }
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 60px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
 
-    .nav-links a:hover {
-      color: #0078d4;
-    }
+.navbar img {
+  height: 38px;
+}
 
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding: 80px 60px;
-      align-items: center;
-      background: linear-gradient(to right, #f9fbfd, #ffffff);
-    }
+.navbar a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: 0.3s;
+}
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 16px;
-    }
+.navbar a:hover {
+  color: #0078d4;
+}
 
-    .hero p {
-      font-size: 18px;
-      color: #555;
-      line-height: 1.5;
-    }
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 140px 60px 80px;
+  background: linear-gradient(135deg, #f5f9ff, #ffffff);
+}
 
-    .btn {
-      margin-top: 20px;
-      display: inline-block;
-      background: #0078d4;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-    }
+.hero h1 {
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 1.1;
+  animation: fadeUp 1s ease-out;
+}
 
-    .btn:hover {
-      background: #005a9e;
-    }
+.hero p {
+  margin-top: 16px;
+  font-size: 18px;
+  color: #555;
+  max-width: 520px;
+  animation: fadeUp 1.2s ease-out;
+}
 
-    .hero-img {
-      width: 100%;
-      max-width: 450px;
-      justify-self: end;
-    }
+.btn {
+  margin-top: 24px;
+  display: inline-block;
+  background: #0078d4;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+  animation: fadeUp 1.4s ease-out;
+}
 
-    /* CARDS */
-    .section {
-      padding: 60px;
-      background: #fff;
-    }
+.btn:hover {
+  background: #005a9e;
+  transform: translateY(-2px);
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 30px;
-    }
+/* HERO IMAGE */
+.hero img {
+  width: 100%;
+  max-width: 460px;
+  justify-self: end;
+  animation: float 4s ease-in-out infinite;
+}
 
-    .card {
-      border: 1px solid #eee;
-      padding: 24px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
+/* SECTIONS */
+.section {
+  padding: 80px 60px;
+}
 
-    .card:hover {
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
 
-    /* FOOTER */
-    .footer {
-      padding: 40px 60px;
-      border-top: 1px solid #eee;
-      font-size: 13px;
-      color: #666;
-    }
+.section p {
+  color: #666;
+  margin-bottom: 30px;
+}
 
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
 
-      .hero-img {
-        justify-self: center;
-        margin-top: 30px;
-      }
+.card {
+  padding: 26px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  transition: 0.3s;
+  background: #fff;
+}
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* CTA BANNER */
+.cta {
+  margin: 60px;
+  padding: 50px;
+  background: linear-gradient(135deg, #0078d4, #00a2ff);
+  color: white;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 32px;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px 60px;
+  border-top: 1px solid #eee;
+  font-size: 13px;
+  color: #666;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero img {
+    margin-top: 40px;
+    justify-self: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    padding: 14px 20px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <div class="nav">
-    <img src="assets/logo.png" class="logo" alt="Expertise S.R.L." />
-    <div class="nav-links">
-      <a href="#">Inicio</a>
-      <a href="#">Servicios</a>
-      <a href="#">Soluciones</a>
-      <a href="#">Contacto</a>
-    </div>
+<!-- NAV -->
+<div class="navbar">
+  <img src="assets/logo.png" alt="EXPERTISE S.R.L." />
+  <div>
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Soluciones</a>
+    <a href="#">Contacto</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Transformamos tecnología en valor para tu negocio</h1>
+    <p>
+      En EXPERTISE S.R.L. ayudamos a empresas a modernizar su infraestructura,
+      migrar a la nube y escalar con soluciones seguras y confiables.
+    </p>
+    <a class="btn" href="#">Explorar soluciones</a>
   </div>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div>
-      <h1>Soluciones tecnológicas que impulsan tu negocio</h1>
-      <p>
-        En EXPERTISE S.R.L. ayudamos a empresas a modernizar su infraestructura,
-        optimizar procesos y escalar con tecnología confiable.
-      </p>
-      <a class="btn" href="#">Conoce nuestros servicios</a>
+  <div>
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" />
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <h2>Soluciones empresariales</h2>
+  <p>Diseñadas para entornos críticos y crecimiento sostenible.</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Infraestructura IT</h3>
+      <p>Arquitectura, soporte y optimización de sistemas empresariales.</p>
     </div>
 
-    <div>
-      <img class="hero-img" src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" />
+    <div class="card">
+      <h3>Microsoft Azure</h3>
+      <p>Migración, administración y gobierno de nube híbrida.</p>
+    </div>
+
+    <div class="card">
+      <h3>Ciberseguridad</h3>
+      <p>Protección avanzada de datos, identidades y redes corporativas.</p>
     </div>
   </div>
+</section>
 
-  <!-- SERVICES -->
-  <div class="section">
-    <h2>Servicios principales</h2>
-    <p>Soluciones empresariales diseñadas para alto rendimiento.</p>
+<!-- CTA -->
+<div class="cta">
+  <h2>Listo para modernizar tu empresa</h2>
+  <p>Conversemos sobre tu siguiente proyecto tecnológico.</p>
+</div>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Infraestructura IT</h3>
-        <p>Diseño, implementación y soporte de entornos empresariales.</p>
-      </div>
-
-      <div class="card">
-        <h3>Cloud & Azure</h3>
-        <p>Migración, administración y optimización en la nube.</p>
-      </div>
-
-      <div class="card">
-        <h3>Ciberseguridad</h3>
-        <p>Protección de datos, redes y sistemas críticos.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    © 2026 EXPERTISE S.R.L. | Todos los derechos reservados
-  </div>
+<!-- FOOTER -->
+<footer>
+  © 2026 EXPERTISE S.R.L. | Soluciones tecnológicas empresariales
+</footer>
 
 </body>
 </html>
