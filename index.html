@@ -3,92 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EXPERTISE PORTAL</title>
+<title>EXPERTISE S.R.L.</title>
 
-<link rel="stylesheet" href="assets/css/main.css">
-<script defer src="assets/js/main.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
+<script defer src="assets/js/app.js"></script>
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
-<aside class="sidebar">
+<!-- NAVBAR MICROSOFT STYLE -->
+<header class="navbar">
 
-  <div class="brand">
-    <img src="assets/img/logo.png" alt="logo">
-    <span>EXPERTISE</span>
-  </div>
+  <img src="assets/img/logo.png" class="logo">
 
   <nav>
-    <a class="active">Overview</a>
-    <a>Infrastructure</a>
-    <a>Cloud Optimization</a>
-    <a>Security</a>
-    <a>Cost Management</a>
-    <a>Cases</a>
-    <a>Reports</a>
+    <a href="index.html">Overview</a>
+    <a href="infrastructure.html">Infrastructure</a>
+    <a href="optimization.html">Global Optimization</a>
+    <a href="security.html">Security</a>
+    <a href="cases.html">Cases</a>
+    <a href="reports.html">Reports</a>
   </nav>
 
-</aside>
+</header>
 
-<!-- MAIN -->
-<main class="main">
+<!-- HERO MICROSOFT STYLE -->
+<section class="hero">
 
-  <!-- TOP BAR -->
-  <header class="topbar">
-    <h1>Enterprise Overview</h1>
+  <div class="hero-content">
 
-    <div class="actions">
-      <button onclick="toggleTheme()">🌗</button>
-      <button class="btn">New Assessment</button>
-    </div>
-  </header>
+    <h1>Arquitecturas tecnológicas preparadas para crecimiento, seguridad y continuidad</h1>
 
-  <!-- KPI -->
-  <section class="grid">
+    <p>
+      Especialistas en Microsoft, Azure y entornos de misión crítica con más de 15 años de experiencia.
+    </p>
 
-    <div class="card kpi">
-      <h2>99.9%</h2>
-      <p>Availability</p>
+    <div class="buttons">
+      <a href="optimization.html" class="btn">Optimizar infraestructura</a>
+      <a href="cases.html" class="btn secondary">Ver casos</a>
     </div>
 
-    <div class="card kpi">
-      <h2>-35%</h2>
-      <p>Cost Optimization</p>
+    <!-- KPI -->
+    <div class="kpi-row">
+      <div>✔ 99.9% Availability</div>
+      <div>✔ -35% Cost Optimization</div>
+      <div>✔ 24/7 Support</div>
     </div>
 
-    <div class="card kpi">
-      <h2>24/7</h2>
-      <p>Support Coverage</p>
-    </div>
+  </div>
 
-    <div class="card kpi">
-      <h2>Azure</h2>
-      <p>Core Platform</p>
-    </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+  </div>
 
-  </section>
-
-  <!-- PANEL -->
-  <section class="panel">
-
-    <div class="card">
-      <h3>Infrastructure Health</h3>
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-
-    <div class="card">
-      <h3>Optimization Status</h3>
-      <p>✔ Resources under control</p>
-      <p>✔ Licensing optimized</p>
-      <p>✔ Cloud efficiency active</p>
-    </div>
-
-  </section>
-
-</main>
+</section>
 
 </body>
 </html>
