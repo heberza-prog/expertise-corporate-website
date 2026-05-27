@@ -1600,7 +1600,7 @@ object-fit:cover;
 .cost-section{
 
 padding:
-90px
+55px
 60px;
 
 background:var(--surface);
@@ -1770,6 +1770,29 @@ grid-template-columns:1fr;
 
 font-size:36px;
 
+}
+
+}
+/* FIX MOBILE MENU */
+
+.mobile-menu{
+display:none;
+}
+
+.mobile-menu.active{
+display:block;
+}
+
+/* HIDE MOBILE BUTTON ON DESKTOP */
+
+.mobile-menu-btn{
+display:none;
+}
+
+@media(max-width:950px){
+
+.mobile-menu-btn{
+display:block;
 }
 
 }
