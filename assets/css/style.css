@@ -145,15 +145,20 @@ cursor:pointer;
 position:relative;
 
 display:grid;
-grid-template-columns:1.05fr 1fr;
+
+grid-template-columns:
+minmax(520px,620px)
+minmax(500px,1fr);
+
+justify-content:space-between;
 
 align-items:center;
 
-padding:40px 70px 60px;
+padding:20px 70px 40px;
 
-min-height:72vh;
+min-height:68vh;
 
-gap:50px;
+gap:20px;
 
 overflow:hidden;
 
