@@ -2,41 +2,44 @@
 <html lang="es">
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>EXPERTISE S.R.L.</title>
 
-<link rel="stylesheet" href="assets/css/style.css">
-
-<script defer src="assets/js/app.js"></script>
+<link rel="stylesheet" href="assets/css/style.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
 <header class="navbar">
 
 <div class="nav-left">
 
+<a href="index.html">
 <img src="assets/img/logo.png" class="logo">
-
-</div>
+</a>
 
 <nav class="nav-links">
 
-<a href="index.html">Overview</a>
-<a href="infrastructure.html">Infrastructure</a>
-<a href="optimization.html">Cloud Optimization</a>
-<a href="security.html">Security</a>
+<a href="#overview">Overview</a>
+<a href="#infrastructure">Infrastructure</a>
+<a href="#optimization">Cloud Optimization</a>
+<a href="#security">Security</a>
 <a href="cases.html">Cases</a>
-<a href="reports.html">Reports</a>
+<a href="#reports">Reports</a>
 
 </nav>
 
+</div>
+
 <div class="nav-right">
 
-<button onclick="toggleTheme()" class="theme-btn">
+<button class="theme-btn" onclick="toggleTheme()">
 🌗
 </button>
 
@@ -44,28 +47,32 @@
 
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
 
-<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
 
-<div class="hero-content reveal">
+<div class="hero-content reveal-left">
 
-<span class="badge">
+<div class="hero-badge">
 Microsoft & Azure Enterprise Specialists
-</span>
+</div>
 
 <h1>
-Arquitecturas tecnológicas preparadas para crecimiento, seguridad y continuidad
+Arquitecturas tecnológicas para crecimiento,
+seguridad y continuidad operativa.
 </h1>
 
 <p>
-Más de 15 años implementando infraestructura empresarial,
-optimización cloud y continuidad operativa para entornos críticos.
+Más de 15 años implementando plataformas Microsoft,
+infraestructura híbrida, optimización cloud y soporte
+especializado para entornos empresariales críticos.
 </p>
 
 <div class="hero-buttons">
 
-<a href="optimization.html" class="btn primary">
+<a href="#optimization" class="btn primary">
 Optimizar infraestructura
 </a>
 
@@ -75,86 +82,176 @@ Ver casos de éxito
 
 </div>
 
-<div class="hero-kpis">
-
-<div class="kpi-card">
-<h3>99.9%</h3>
-<span>Availability</span>
-</div>
-
-<div class="kpi-card">
-<h3>-35%</h3>
-<span>Cost Optimization</span>
-</div>
-
-<div class="kpi-card">
-<h3>24/7</h3>
-<span>Support Coverage</span>
-</div>
-
-</div>
-
 </div>
 
 <div class="hero-image reveal-right">
 
 <img
-src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop">
+src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop"
+alt="Enterprise Infrastructure">
 
 </div>
 
 </section>
 
-<section class="enterprise-section">
+<!-- KPI SECTION -->
 
-<div class="enterprise-grid">
+<section class="kpi-section">
 
-<div class="enterprise-card">
+<div class="kpi-grid">
 
-<h2>
-Cloud Optimization
-</h2>
+<div class="kpi-card reveal">
+<h3 class="counter" data-target="99">99</h3>
+<span>Availability</span>
+</div>
 
-<p>
-Reducción inteligente de costos Azure y optimización de recursos empresariales.
-</p>
+<div class="kpi-card reveal">
+<h3>-35%</h3>
+<span>Cost Optimization</span>
+</div>
+
+<div class="kpi-card reveal">
+<h3>24/7</h3>
+<span>Support Coverage</span>
+</div>
+
+<div class="kpi-card reveal">
+<h3>Azure</h3>
+<span>Core Platform</span>
+</div>
 
 </div>
 
-<div class="enterprise-card">
+</section>
 
-<h2>
-Mission Critical Support
-</h2>
+<!-- MICROSOFT TILES -->
+
+<section class="tiles-section">
+
+<div class="tiles-grid">
+
+<div class="tile reveal">
+
+<img
+src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop">
+
+<div class="tile-content">
+
+<h3>Infraestructura híbrida</h3>
 
 <p>
-Soporte especializado 24/7 para operaciones críticas y alta disponibilidad.
+Diseño e implementación de escenarios híbridos
+entre datacenter local y Microsoft Azure.
 </p>
+
+<a href="#">
+Conocer más
+</a>
 
 </div>
 
-<div class="enterprise-card">
+</div>
 
-<h2>
-Security & Governance
-</h2>
+<div class="tile reveal">
+
+<img
+src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop">
+
+<div class="tile-content">
+
+<h3>Optimización de costos</h3>
 
 <p>
-Arquitecturas seguras y alineadas a mejores prácticas empresariales.
+Reducción de costos cloud mediante análisis
+de consumo, sizing y optimización Azure.
 </p>
+
+<a href="#">
+Explorar solución
+</a>
+
+</div>
+
+</div>
+
+<div class="tile reveal">
+
+<img
+src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop">
+
+<div class="tile-content">
+
+<h3>Continuidad operativa</h3>
+
+<p>
+Soporte especializado 24/7 para plataformas
+de misión crítica y alta disponibilidad.
+</p>
+
+<a href="#">
+Ver servicios
+</a>
+
+</div>
+
+</div>
+
+<div class="tile reveal">
+
+<img
+src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=2070&auto=format&fit=crop">
+
+<div class="tile-content">
+
+<h3>Licenciamiento Microsoft</h3>
+
+<p>
+Assessment, regularización y optimización
+de licenciamiento empresarial.
+</p>
+
+<a href="#">
+Más información
+</a>
+
+</div>
 
 </div>
 
 </div>
 
 </section>
+
+<!-- ENTERPRISE OVERVIEW -->
+
+<section class="enterprise-section" id="overview">
+
+<div class="section-text reveal-left">
+
+<h2>
+Especialistas en plataformas Microsoft enterprise
+</h2>
+
+<p>
+Trabajamos con empresas de sectores financieros,
+telecomunicaciones, retail, industria y operaciones
+de misión crítica, ayudando a modernizar infraestructura,
+reducir costos y garantizar continuidad operativa.
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
 
 <footer>
 
-© 2026 EXPERTISE S.R.L.
-Enterprise Cloud & Infrastructure Solutions
+© 2026 EXPERTISE S.R.L. — Enterprise Cloud & Infrastructure Solutions
 
 </footer>
+
+<script src="assets/js/app.js"></script>
 
 </body>
 </html>
