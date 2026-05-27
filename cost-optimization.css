@@ -477,3 +477,18 @@ display:none;
   }
 
 }
+/* HIDE MOBILE BUTTON ON DESKTOP */
+
+.mobile-menu-btn{
+  display:none;
+}
+
+/* SHOW ONLY ON MOBILE */
+
+@media(max-width:950px){
+
+  .mobile-menu-btn{
+    display:block;
+  }
+
+}
