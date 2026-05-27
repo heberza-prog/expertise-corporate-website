@@ -503,3 +503,125 @@ display:none;
 }
 
 }
+/* =========================
+   CASE STUDY
+========================= */
+
+.case-summary,
+.tech-stack,
+.impact-section{
+
+padding:40px 70px;
+
+}
+
+.case-summary h2,
+.tech-stack h2,
+.impact-section h2{
+
+font-size:38px;
+margin-bottom:20px;
+
+}
+
+.case-summary p{
+
+max-width:900px;
+
+font-size:18px;
+line-height:1.8;
+
+color:var(--muted);
+
+}
+
+/* TECH GRID */
+
+.tech-grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:24px;
+
+}
+
+/* TECH CARD */
+
+.tech-card{
+
+background:var(--surface);
+
+padding:30px;
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+transition:0.4s;
+
+}
+
+.tech-card:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+0 20px 45px rgba(0,0,0,0.08);
+
+}
+
+/* MICROSOFT BADGE */
+
+.microsoft-badge{
+
+display:flex;
+align-items:center;
+gap:14px;
+
+margin-top:25px;
+
+padding:14px 20px;
+
+background:rgba(255,255,255,0.7);
+
+border-radius:16px;
+
+width:fit-content;
+
+backdrop-filter:blur(10px);
+
+border:1px solid var(--border);
+
+}
+
+body.dark .microsoft-badge{
+
+background:rgba(17,24,39,0.7);
+
+}
+
+.microsoft-badge img{
+
+height:24px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.tech-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.case-summary,
+.tech-stack,
+.impact-section{
+
+padding:40px 30px;
+
+}
+
+}
