@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cost Optimization | EXPERTISE SRL</title>
+<title>Cost Optimization | EXPERTISE</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -18,30 +20,30 @@
 
 <div class="nav-left">
 
-<a href="index.html" class="logo-area">
+<a href="index.html">
 <img src="assets/logo.png" class="logo">
-<span>EXPERTISE</span>
 </a>
 
 <nav class="nav-links">
+
 <a href="overview.html">Overview</a>
 <a href="infrastructure.html">Infrastructure</a>
-<a href="cost-optimization.html" class="active">Cost Optimization</a>
+<a href="cost-optimization.html">Cost Optimization</a>
+<a href="cases.html">Casos de Éxito</a>
 <a href="support.html">Mission Critical Support</a>
-<a href="cases.html">Cases</a>
-<a href="contact.html">Contact</a>
+
 </nav>
 
 </div>
 
 <div class="nav-right">
 
-<button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-☰
+<button class="theme-btn" onclick="toggleTheme()">
+🌗
 </button>
 
-<button class="theme-toggle" onclick="toggleTheme()">
-🌗
+<button class="mobile-menu-btn" onclick="toggleMenu()">
+☰
 </button>
 
 </div>
@@ -55,110 +57,90 @@
 <a href="overview.html">Overview</a>
 <a href="infrastructure.html">Infrastructure</a>
 <a href="cost-optimization.html">Cost Optimization</a>
+<a href="cases.html">Casos de Éxito</a>
 <a href="support.html">Mission Critical Support</a>
-<a href="cases.html">Cases</a>
-<a href="contact.html">Contact</a>
 
 </div>
 
 <!-- HERO -->
 
-<section class="page-hero">
+<section class="cost-hero">
 
-<div class="hero-overlay"></div>
+<div class="cost-overlay"></div>
 
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1920&auto=format&fit=crop"
-class="hero-bg">
+<div class="cost-content reveal-left">
 
-<div class="hero-content">
-
-<div class="eyebrow">
-Enterprise Optimization Services
+<div class="hero-badge">
+Azure Cost Optimization & SAM Governance
 </div>
 
 <h1>
-Cost optimization designed for enterprise infrastructure
+Optimización inteligente de costos en entornos Microsoft y Azure
 </h1>
 
 <p>
-Ayudamos a organizaciones a optimizar costos operativos de infraestructura Microsoft, Azure y licenciamiento empresarial mediante análisis avanzados de consumo, racionalización de recursos y estrategias de eficiencia tecnológica.
+Reducimos costos operativos y optimizamos plataformas Microsoft mediante análisis de consumo, rightsizing, revisión de licenciamiento, recomendaciones del fabricante y gobierno tecnológico orientado a eficiencia y continuidad operativa.
 </p>
 
 <div class="hero-buttons">
 
-<a href="contact.html" class="btn-primary">
-Schedule Assessment
+<a href="cases.html" class="btn primary">
+Ver proyectos
 </a>
 
-<a href="#services" class="btn-secondary">
-Explore Services
+<a href="support.html" class="btn secondary">
+Soporte especializado
 </a>
 
 </div>
 
 </div>
 
-</section>
+<div class="cost-image reveal-right">
 
-<!-- KPI SECTION -->
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop">
 
-<section class="kpi-section">
-
-<div class="kpi-card">
-<h2>-21%</h2>
-<p>Reducción de costos operativos Azure</p>
-</div>
-
-<div class="kpi-card">
-<h2>261 → 72</h2>
-<p>Racionalización de infraestructura Windows Server</p>
-</div>
-
-<div class="kpi-card">
-<h2>742</h2>
-<p>Equipos analizados y optimizados</p>
-</div>
-
-<div class="kpi-card">
-<h2>24/7</h2>
-<p>Continuidad operativa preservada</p>
 </div>
 
 </section>
 
-<!-- SECTION 1 -->
+<!-- KPI -->
 
-<section class="content-section" id="services">
+<section class="cost-section">
 
-<div class="section-grid">
-
-<div class="section-text">
-
-<div class="section-label">
-Azure Infrastructure Optimization
+<div class="section-mini">
+Resultados operativos
 </div>
 
-<h2>
-Optimización inteligente de infraestructura cloud
-</h2>
+<div class="cost-kpis">
 
-<p>
-Realizamos análisis avanzados sobre consumo histórico, utilización de recursos, comportamiento operativo y arquitectura Azure para identificar oportunidades reales de optimización sin afectar continuidad operativa ni rendimiento productivo.
-</p>
+<div class="cost-kpi">
 
-<p>
-Nuestros procesos contemplan evaluación de capacidad, detección de recursos sobredimensionados, consumo residual, activos huérfanos, configuraciones ineficientes y servicios que continúan generando costos aun cuando ya no son utilizados activamente.
-</p>
+<h2>-$1K+</h2>
 
-<p>
-El objetivo no es simplemente reducir costos, sino construir una infraestructura más eficiente, sostenible y alineada al crecimiento del negocio.
-</p>
+<span>
+Ahorro mensual recurrente en consumo Azure optimizado
+</span>
 
 </div>
 
-<div class="section-image">
+<div class="cost-kpi">
 
-<img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop">
+<h2>72%</h2>
+
+<span>
+Reducción de recursos sobredimensionados e innecesarios
+</span>
+
+</div>
+
+<div class="cost-kpi">
+
+<h2>365</h2>
+
+<span>
+Monitoreo histórico y recomendaciones basadas en uso real
+</span>
 
 </div>
 
@@ -166,79 +148,93 @@ El objetivo no es simplemente reducir costos, sino construir una infraestructura
 
 </section>
 
-<!-- SECTION 2 -->
+<!-- MAIN CONTENT -->
 
-<section class="content-section alt-section">
+<section class="cost-section">
 
-<div class="section-grid reverse">
-
-<div class="section-image">
-
-<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop">
-
+<div class="section-mini">
+Servicios especializados
 </div>
 
-<div class="section-text">
+<div class="cost-grid">
 
-<div class="section-label">
-Microsoft Licensing & SAM
-</div>
+<!-- CARD 1 -->
 
-<h2>
-Optimización y gobernanza de licenciamiento Microsoft
-</h2>
+<div class="cost-card reveal">
 
-<p>
-Desarrollamos procesos de Software Asset Management (SAM) enfocados en identificar oportunidades de optimización, regularización y alineación del licenciamiento Microsoft dentro de entornos corporativos complejos.
-</p>
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop">
 
-<p>
-Nuestros análisis consideran infraestructura Windows Server, SQL Server, Microsoft 365, entornos híbridos y estaciones de trabajo empresariales, permitiendo identificar brechas de cumplimiento, recursos no utilizados y oportunidades de consolidación tecnológica.
-</p>
+<div class="cost-card-content">
+
+<h3>
+Azure Cost Optimization
+</h3>
 
 <p>
-Esto permite construir estrategias sostenibles de cumplimiento y optimización financiera sin afectar la operación del negocio.
+Análisis avanzado de facturación, monitoreo histórico de consumo, detección de recursos sobredimensionados y optimización basada en recomendaciones oficiales Microsoft.
 </p>
 
 </div>
 
 </div>
 
-</section>
+<!-- CARD 2 -->
 
-<!-- SECTION 3 -->
+<div class="cost-card reveal">
 
-<section class="content-section">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop">
 
-<div class="section-grid">
+<div class="cost-card-content">
 
-<div class="section-text">
+<h3>
+Rightsizing & Performance
+</h3>
 
-<div class="section-label">
+<p>
+Optimización de máquinas virtuales, discos, storage, networking y recursos cloud manteniendo performance, continuidad operativa y estabilidad productiva.
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="cost-card reveal">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop">
+
+<div class="cost-card-content">
+
+<h3>
+SAM & Licensing Governance
+</h3>
+
+<p>
+Inventario y racionalización de licenciamiento Microsoft para Windows Server, SQL Server, Microsoft 365 y plataformas empresariales orientadas a compliance y reducción de costos.
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="cost-card reveal">
+
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2070&auto=format&fit=crop">
+
+<div class="cost-card-content">
+
+<h3>
 Operational Governance
-</div>
-
-<h2>
-Visibilidad operacional y control tecnológico
-</h2>
+</h3>
 
 <p>
-Nuestros servicios incorporan procesos de análisis, inventario, monitoreo y evaluación técnica orientados a brindar mayor control sobre la infraestructura tecnológica empresarial.
-</p>
-
-<p>
-Esto permite tomar decisiones basadas en datos reales de consumo, capacidad y comportamiento operativo, reduciendo riesgos asociados al crecimiento desordenado de plataformas tecnológicas.
-</p>
-
-<p>
-A través de modelos de evaluación continua ayudamos a las organizaciones a mantener ambientes más eficientes, previsibles y preparados para escalar.
+Gobierno tecnológico orientado a eficiencia operativa, consolidación de recursos, identificación de riesgos y construcción de roadmap de optimización empresarial.
 </p>
 
 </div>
-
-<div class="section-image">
-
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop">
 
 </div>
 
@@ -246,56 +242,70 @@ A través de modelos de evaluación continua ayudamos a las organizaciones a man
 
 </section>
 
-<!-- SUCCESS STORY -->
+<!-- ENTERPRISE -->
 
-<section class="success-banner">
+<section class="enterprise-section">
 
-<div class="success-content">
-
-<div class="section-label">
-Enterprise Results
+<div class="section-mini">
+Enterprise Strategy
 </div>
 
 <h2>
-Resultados medibles en ambientes de misión crítica
+Optimización tecnológica basada en datos reales y experiencia operacional
 </h2>
 
 <p>
-Experiencia comprobada optimizando plataformas Microsoft y Azure en organizaciones empresariales de alta demanda operativa, preservando estabilidad, disponibilidad y escalabilidad.
+Nuestros proyectos de optimización permiten identificar consumos innecesarios, recursos abandonados, plataformas sobredimensionadas y oportunidades de racionalización de costos manteniendo estabilidad y performance empresarial.
 </p>
-
-<a href="cases.html" class="btn-primary">
-View Success Cases
-</a>
-
-</div>
 
 </section>
 
 <!-- FOOTER -->
 
-<footer class="footer">
+<footer>
 
-<div>
-© 2026 EXPERTISE SRL — Enterprise Infrastructure & Cloud Services
-</div>
+© 2026 EXPERTISE SRL — Enterprise Cloud & Infrastructure Solutions
 
 </footer>
+
+<!-- SCRIPT -->
 
 <script>
 
 function toggleTheme(){
 
-document.body.classList.toggle("dark-theme");
+document.body.classList.toggle('dark');
 
 }
 
-function toggleMobileMenu(){
+function toggleMenu(){
 
-document.getElementById("mobileMenu")
-.classList.toggle("show-mobile-menu");
+document.getElementById('mobileMenu')
+.classList.toggle('active');
 
 }
+
+const reveals =
+document.querySelectorAll(
+'.reveal, .reveal-left, .reveal-right'
+);
+
+window.addEventListener('scroll', ()=>{
+
+reveals.forEach(el=>{
+
+const top =
+el.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 100){
+
+el.classList.add('active');
+
+}
+
+});
+
+});
 
 </script>
 
