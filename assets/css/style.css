@@ -1773,26 +1773,39 @@ font-size:36px;
 }
 
 }
-/* FIX MOBILE MENU */
+/* =========================================
+   MOBILE MENU FIX FINAL
+========================================= */
 
 .mobile-menu{
+
 display:none;
+flex-direction:column;
+
 }
 
 .mobile-menu.active{
-display:block;
+
+display:flex;
+
 }
 
-/* HIDE MOBILE BUTTON ON DESKTOP */
+/* DESKTOP */
 
 .mobile-menu-btn{
+
 display:none;
+
 }
+
+/* MOBILE */
 
 @media(max-width:950px){
 
 .mobile-menu-btn{
+
 display:block;
+
 }
 
 }
