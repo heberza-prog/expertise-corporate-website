@@ -1,160 +1,355 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>EXPERTISE S.R.L.</title>
+<title>Infrastructure | EXPERTISE</title>
 
-<link rel="stylesheet" href="assets/css/style.css">
-
-<script defer src="assets/js/app.js"></script>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
 <header class="navbar">
 
 <div class="nav-left">
 
-<img src="assets/img/logo.png" class="logo">
-
-</div>
+<a href="index.html">
+<img src="assets/logo.png" class="logo">
+</a>
 
 <nav class="nav-links">
 
-<a href="index.html">Overview</a>
+<a href="overview.html">Overview</a>
 <a href="infrastructure.html">Infrastructure</a>
-<a href="optimization.html">Cloud Optimization</a>
-<a href="security.html">Security</a>
-<a href="cases.html">Cases</a>
-<a href="reports.html">Reports</a>
+<a href="cost-optimization.html">Cost Optimization</a>
+<a href="cases.html">Casos de Éxito</a>
+<a href="support.html">Mission Critical Support</a>
 
 </nav>
 
+</div>
+
 <div class="nav-right">
 
-<button onclick="toggleTheme()" class="theme-btn">
+<button class="theme-btn" onclick="toggleTheme()">
 🌗
+</button>
+
+<button class="mobile-menu-btn" onclick="toggleMenu()">
+☰
 </button>
 
 </div>
 
 </header>
 
-<section class="hero">
+<!-- MOBILE MENU -->
 
-<div class="hero-bg"></div>
+<div class="mobile-menu" id="mobileMenu">
 
-<div class="hero-content reveal">
+<a href="overview.html">Overview</a>
+<a href="infrastructure.html">Infrastructure</a>
+<a href="cost-optimization.html">Cost Optimization</a>
+<a href="cases.html">Casos de Éxito</a>
+<a href="support.html">Mission Critical Support</a>
 
-<span class="badge">
-Microsoft & Azure Enterprise Specialists
-</span>
+</div>
+
+<!-- HERO -->
+
+<section class="overview-hero">
+
+<div class="overview-overlay"></div>
+
+<div class="overview-content reveal-left">
+
+<div class="hero-badge">
+Microsoft Infrastructure & Hybrid Cloud
+</div>
 
 <h1>
-Arquitecturas tecnológicas preparadas para crecimiento, seguridad y continuidad
+Infraestructura empresarial moderna, híbrida y altamente disponible
 </h1>
 
-<p>
-Más de 15 años implementando infraestructura empresarial,
-optimización cloud y continuidad operativa para entornos críticos.
+<p style="margin-top:20px; line-height:1.8; color:rgba(255,255,255,0.88);">
+
+Diseñamos, migramos y optimizamos plataformas Microsoft críticas para empresas que requieren continuidad operativa, performance, automatización y estabilidad empresarial tanto on-premises como en Azure.
+
 </p>
 
 <div class="hero-buttons">
 
-<a href="optimization.html" class="btn primary">
-Optimizar infraestructura
+<a href="cases.html" class="btn primary">
+Ver proyectos
 </a>
 
-<a href="cases.html" class="btn secondary">
-Ver casos de éxito
+<a href="support.html" class="btn secondary">
+Soporte especializado
 </a>
 
 </div>
 
-<div class="hero-kpis">
+</div>
+
+<div class="overview-image reveal-right">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- KPI -->
+
+<section class="kpi-section">
+
+<div class="kpi-grid">
 
 <div class="kpi-card">
-<h3>99.9%</h3>
-<span>Availability</span>
+<h3>15+</h3>
+<span>Años implementando plataformas Microsoft empresariales</span>
 </div>
 
 <div class="kpi-card">
-<h3>-35%</h3>
-<span>Cost Optimization</span>
+<h3>Hybrid</h3>
+<span>Experiencia avanzada en escenarios híbridos Azure y On-Premises</span>
+</div>
+
+<div class="kpi-card">
+<h3>HA</h3>
+<span>Alta disponibilidad para correo, bases de datos y aplicaciones críticas</span>
 </div>
 
 <div class="kpi-card">
 <h3>24/7</h3>
-<span>Support Coverage</span>
+<span>Continuidad operativa y soporte enterprise especializado</span>
 </div>
-
-</div>
-
-</div>
-
-<div class="hero-image reveal-right">
-
-<img
-src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop">
 
 </div>
 
 </section>
+
+<!-- SERVICES -->
+
+<section class="tiles-section">
+
+<div class="section-mini">
+Infraestructura empresarial
+</div>
+
+<div class="tiles-grid">
+
+<!-- TILE -->
+
+<div class="tile reveal">
+
+<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop">
+
+<div class="tile-content">
+
+<h3>
+Hybrid Cloud & Azure
+</h3>
+
+<p>
+Implementación de infraestructura Microsoft Azure, IaaS, redes híbridas, VPN Site-to-Site, Point-to-Site, balanceadores, workloads empresariales y modernización cloud.
+</p>
+
+</div>
+
+</div>
+
+<!-- TILE -->
+
+<div class="tile reveal">
+
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop">
+
+<div class="tile-content">
+
+<h3>
+Exchange & Microsoft 365
+</h3>
+
+<p>
+Migraciones Exchange Server, coexistencia híbrida con Microsoft 365, alta disponibilidad DAG y modernización de plataformas de correo corporativo.
+</p>
+
+</div>
+
+</div>
+
+<!-- TILE -->
+
+<div class="tile reveal">
+
+<img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2070&auto=format&fit=crop">
+
+<div class="tile-content">
+
+<h3>
+SQL Server & Performance
+</h3>
+
+<p>
+Optimización avanzada SQL Server, Always On Availability Groups, tuning de performance, análisis de queries y plataformas de alta disponibilidad.
+</p>
+
+</div>
+
+</div>
+
+<!-- TILE -->
+
+<div class="tile reveal">
+
+<img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?q=80&w=2070&auto=format&fit=crop">
+
+<div class="tile-content">
+
+<h3>
+Automation & Deployment
+</h3>
+
+<p>
+Automatización de despliegues Windows mediante MDT, imágenes corporativas estandarizadas y provisión masiva de equipos empresariales.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SECOND SECTION -->
+
+<section class="case-section">
+
+<div class="case-grid">
+
+<div class="case-image reveal-left">
+
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2070&auto=format&fit=crop">
+
+</div>
+
+<div class="case-text reveal-right">
+
+<div class="section-label">
+Enterprise Platforms
+</div>
+
+<h2>
+Infraestructura diseñada para continuidad operativa empresarial
+</h2>
+
+<p>
+Implementamos plataformas Microsoft críticas orientadas a estabilidad, redundancia y escalabilidad empresarial.
+</p>
+
+<p>
+Nuestra experiencia incluye clústeres de File Server, DFS Namespace, IIS NLB, virtualización Hyper-V, migraciones VMware, System Center, SharePoint y servicios corporativos de misión crítica.
+</p>
+
+<p>
+Diseñamos arquitecturas basadas en buenas prácticas Microsoft y experiencia real en ambientes productivos empresariales.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ENTERPRISE -->
 
 <section class="enterprise-section">
 
-<div class="enterprise-grid">
-
-<div class="enterprise-card">
+<div class="section-mini">
+Enterprise Vision
+</div>
 
 <h2>
-Cloud Optimization
+Tecnología empresarial alineada a performance, estabilidad y crecimiento
 </h2>
 
 <p>
-Reducción inteligente de costos Azure y optimización de recursos empresariales.
+Cada proyecto es construido considerando continuidad operativa, automatización, seguridad, alta disponibilidad y capacidad de crecimiento futuro, permitiendo que las plataformas tecnológicas acompañen la evolución real del negocio.
 </p>
-
-</div>
-
-<div class="enterprise-card">
-
-<h2>
-Mission Critical Support
-</h2>
-
-<p>
-Soporte especializado 24/7 para operaciones críticas y alta disponibilidad.
-</p>
-
-</div>
-
-<div class="enterprise-card">
-
-<h2>
-Security & Governance
-</h2>
-
-<p>
-Arquitecturas seguras y alineadas a mejores prácticas empresariales.
-</p>
-
-</div>
-
-</div>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
-© 2026 EXPERTISE S.R.L.
-Enterprise Cloud & Infrastructure Solutions
+© 2026 EXPERTISE SRL — Enterprise Cloud & Infrastructure Solutions
 
 </footer>
+
+<!-- SCRIPT -->
+
+<script>
+
+function toggleTheme(){
+
+document.body.classList.toggle('dark');
+
+}
+
+function toggleMenu(){
+
+document.getElementById('mobileMenu')
+.classList.toggle('active');
+
+}
+
+const reveals =
+document.querySelectorAll(
+'.reveal, .reveal-left, .reveal-right'
+);
+
+window.addEventListener('scroll', ()=>{
+
+reveals.forEach(el=>{
+
+const top =
+el.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 100){
+
+el.classList.add('active');
+
+}
+
+});
+
+});
+
+/* FIX INITIAL HERO */
+
+window.addEventListener('load', ()=>{
+
+document.querySelectorAll(
+'.hero, .overview-hero, .reveal-left, .reveal-right'
+).forEach(el=>{
+
+el.classList.add('active');
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
